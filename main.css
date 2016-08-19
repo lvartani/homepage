@@ -1,0 +1,493 @@
+* {
+    margin: 0;
+            }
+html, body {
+        height: 100%;
+    }
+
+.page-wrap {
+      min-height: 100%;
+      /* equal to footer height */
+        margin-bottom: -80px;
+    }
+.page-wrap:after {
+      content: "";
+      display: block;
+    }
+.site-footer, .page-wrap:after {
+      /* .push must be the same height as footer */
+        height: 80px;
+    }
+.site-footer {
+      background: #FFF;
+    }
+
+ h1 {
+  position: absolute;
+  top: 550px;
+  right: 13%;
+  font-family: 'Raleway' !important;
+  font-size: 25px;
+  color:steelblue;
+  text-align: right;
+  width: 960px ;
+  height:800 px
+  z-index: 4;
+  }
+
+.globe{
+      position: absolute;
+
+    right: 17%;
+    top: 100px;
+    }
+
+.water {
+  fill: #3399FF;
+  cursor:move;
+}
+
+.land {
+  fill: lightgrey;
+  stroke: #FFF;
+  stroke-width: 1px;
+}
+
+.land:hover {
+  fill:#FFFF99;
+  stroke-width: 1.2px;
+}
+
+
+.country {
+  fill: #FFCC00;
+  stroke: #FFF;
+  stroke-width: 1px;
+}
+
+.country:hover {
+  fill:#FFFF99;
+  stroke-width: 1.2px;
+}
+
+.countryTooltip {
+  position: absolute;
+  display: none;
+  pointer-events: none;
+  background: #fff;
+  padding: 5px;
+  text-align: left;
+  border: solid #ccc 1px;
+  color: #666;
+  font-size: 14px;
+  font-family: sans-serif;
+  border-radius:10px;
+}
+
+path {
+  stroke: rgba(225,227,216,0.8);
+  stroke-width: 2px;
+}
+
+path:first-child {
+  fill: #3399FF !important;
+}
+
+circle {
+  fill: #FFFFFF;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.q0-9 { fill: #E8E8E8}
+.q1-9 { fill: #EDF3F3}
+.q2-9 { fill: #E0EAEA }
+.q3-9 { fill: #FFFFFF }
+.q4-9 { fill: #FFFF99 }
+.q5-9 { fill: #C8C8DA}
+.q6-9 { fill: #F8F8F8 }
+.q7-9 { fill: #FFCC00}
+.q8-9 { fill: #FFFF99}
+
+
+
+#panel {
+
+width: 1000px;
+margin: auto;
+z-index:2;
+
+}
+
+title {
+color:blue;
+}
+
+title.text {
+color:blue;
+}
+
+#tesselate {
+position: absolute;
+top:100px;
+right: 1%;
+width: 8%;
+z-index:1;
+height:600px;
+}
+
+rect{
+fill: #EDF3F3;
+}
+rect:hover
+
+  {
+    fill: #FFCC00 !important;
+    cursor:pointer;
+
+  }
+
+#rects{
+
+position:absolute;
+top:0;
+width:350px;
+left:-50px;
+padding-left:60px;
+padding-right:50px;
+padding-top: 90px;
+z-index:1;
+
+
+}
+
+#rect{
+
+
+}
+
+
+text {
+cursor:pointer;
+}
+
+circle{
+position:absolute:
+float:right;
+padding-left:400px;
+padding-top: 40px;
+padding-right:10px;
+}
+
+#div1 {
+    font-family:Arial;
+    font-size:25px;
+    color:orange;
+    margin: 3px;
+    width: 80px;
+    display: none;
+  }
+
+ #div2 {
+    font-family:Arial;
+    font-size:15px;
+    color:steelblue;
+    margin: 3px;
+    width: 80px;
+    display: none;
+  }
+
+
+#showr{
+
+    cursor:pointer;
+
+}
+
+#hidr{
+
+    cursor:pointer;
+}
+
+ul.sonarmenu{ /* Inspired by http://tympanus.net/codrops/2013/08/06/creative-link-effects */
+    list-style: none;
+}
+
+ul.sonarmenu li{
+    display: inline;
+}
+
+ul.sonarmenu a{
+    position: relative;
+    display: inline-block;
+    color: black; /* font color */
+    text-decoration: none;
+    margin: 10px 20px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif; /* font style (uses Google fonts) */
+    font-size: 16px; /* font size */
+    letter-spacing: 2px; /* letter spacing */
+    border-bottom: 2px solid transparent; /* Bottom border style */
+}
+
+ul.sonarmenu a:hover, ul.sonarmenu a:focus{
+    outline: none;
+    border-bottom: 2px solid #eee; /* Bottom border style on hover */
+}
+
+ul.sonarmenu a::before, ul.sonarmenu a:after{ /* shared style for two circles */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px; /* width of outer circle */
+    height: 70px; /* height of outer circle */
+    border: 12px double rgba(0,0,0,0.1); /* style and color of circles */
+    border-radius: 50%;
+    content: '';
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.2);
+    -moz-transform: translateX(-50%) translateY(-50%) scale(0.2);
+    transform: translateX(-50%) translateY(-50%) scale(0.2);
+}
+
+ul.sonarmenu a:after{ /* inner circle specific CSS */
+    width: 60px; /* width of inner circle */
+    height: 60px; /* width of inner circle */
+    border-width: 6px;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+    -moz-transform: translateX(-50%) translateY(-50%) scale(0.8);
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+}
+
+ul.sonarmenu a:hover:before, ul.sonarmenu a:hover:after{
+    -webkit-animation: pulsate 1.2s infinite; /* animation name duration loop etc */
+    -moz-animation: pulsate 1.2s infinite;
+    -ms-animation: pulsate 1.2s infinite;
+    animation: pulsate 1.2s infinite;
+}
+
+/* ### Keyframe animations ### */
+
+@-webkit-keyframes pulsate{
+
+  30%{
+    opacity: 1;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+  }
+
+    100%{
+    opacity: 0.3;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.5);
+    }
+
+}
+
+@-moz-keyframes pulsate{
+
+  30%{
+    opacity: 1;
+    -moz-transform: translateX(-50%) translateY(-50%) scale(1);
+  }
+
+    100%{
+    opacity: 0.3;
+    -moz-transform: translateX(-50%) translateY(-50%) scale(0.5);
+    }
+
+}
+
+@-ms-keyframes pulsate{
+
+  30%{
+    opacity: 1;
+    -ms-transform: translateX(-50%) translateY(-50%) scale(1);
+  }
+
+    100%{
+    opacity: 0.3;
+    -ms-transform: translateX(-50%) translateY(-50%) scale(0.5);
+    }
+
+}
+
+@-keyframes pulsate{
+
+  30%{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+  }
+
+    100%{
+    opacity: 0.3;
+    transform: translateX(-50%) translateY(-50%) scale(0.5);
+    }
+
+}
+
+.ui-dialog {
+    background: white !important;
+    border: 1px solid black !important;
+    border-radius: 10px !important;
+
+}
+
+.ui-dialog-titlebar {
+    background: none !important;
+    border: 0px solid black !important;
+    font: Raleway;
+
+}
+
+.ui-dialog-title{
+    font-size: 150% !important;
+    color: #000 !important;
+    background: #fff !important;
+    font-family: Raleway;
+}
+
+
+@media screen and (max-width: 50%) {
+    .globe,#globewater, {
+        display: none !important;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .sonarmenu,  {
+        display: none !important;
+    }
+
+}
+
+
+/* Set the fixed height of the footer here */
+footer#footer {
+  height: 80px !important;
+  background-color: #F6F6F5 !important;
+  width:100%;
+  z-index:100000000000;
+  bottom:10px;
+  font-family:Raleway;
+}
+
+#footer2 {
+  height: 80px;
+  background-color: #F6F6F5 !important;
+  width:100%;
+  z-index:100000000000;
+  bottom:0;
+  left:0;
+  position absolute;
+  font-family:Raleway;
+}
+
+.icon img{ /* 2nd set of icons. Rotate them 60deg onmouseover and out */
+moz-transition: all 0.8s ease-in-out;
+-webkit-transition: all 0.8s ease-in-out;
+-o-transition: all 0.8s ease-in-out;
+-ms-transition: all 0.8s ease-in-out;
+transition: all 0.8s ease-in-out;
+}
+
+.icon img:hover{
+-moz-transform: rotate(70deg);
+-webkit-transform: rotate(70deg);
+-o-transform: rotate(70deg);
+-ms-transform: rotate(70deg);
+transform: rotate(70deg);
+}
+
+
+.icon4 img{ /* 2nd set of icons. Rotate them 60deg onmouseover and out */
+moz-transition: all 0.8s ease-in-out;
+-webkit-transition: all 0.8s ease-in-out;
+-o-transition: all 0.8s ease-in-out;
+-ms-transition: all 0.8s ease-in-out;
+transition: all 0.8s ease-in-out;
+}
+
+.icon4 img:hover{
+-moz-transform: rotate(70deg);
+-webkit-transform: rotate(70deg);
+-o-transform: rotate(70deg);
+-ms-transform: rotate(70deg);
+transform: rotate(70deg);
+}
+
+.dialogWithDropShadow
+     {
+         -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+         -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+     }
+.ui-front {
+    z-index:1000000 !important; /* The default is 100. !important overrides the default. */
+}
+.drop, .drop2, .container, .data, #moreinfo{
+display:none;
+}
+.side{
+float:right; padding-right:20px; background-color:#E6FFFF;padding:10px;   padding-right:20px; border-radius: 25px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+#more1:hover{
+color:steelblue;
+cursor:pointer;
+background-color:lightgrey;
+ border-radius: 5px;
+}
+
+
+
+
+.ui-widget-overlay.custom-overlay
+{
+    background-color: black;
+    background-image: none;
+    opacity: 0.8;
+    z-index: 1040;
+}
+
+
+#explore{
+font-family:Raleway;
+position:absolute;
+top:100px;
+right:21%
+
+}
+
+#countries152, #countries51, #countries268, #countries392, #countries840 {
+cursor:pointer;
+}
+
+.shadow {
+-webkit-filter: drop-shadow( -5px -5px 5px #000 ) !important;
+        filter: drop-shadow( -5px -5px 5px #000 )!important;
+}
+
+div.tooltip2{
+position:absolute;
+z-index: 10;
+top:510px;
+left: 37px;
+width: 200px;
+visibility:hidden;
+font-family: Raleway;
+font-weight: bold;
+font-size: small;
+}
