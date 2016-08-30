@@ -1,53 +1,63 @@
+var  mn = $(".main-nav");
+    mns = "main-nav-scrolled";
+    hdr = $('header').height();
 
+$(window).scroll(function() {
+  if( $(this).scrollTop() > hdr ) {
+    mn.addClass(mns);
+  } else {
+    mn.removeClass(mns);
+  }
+});
 	//BOXES START//
-
-	var tooltip = d3.select("body")
-	.append("div")
-	.attr("class", "tooltip2")
-	.html("[Received William E. Doctor Education Fund]" +  "<br/>" + "This map shows the locations of mining in Armenia.");
-
-	var tooltip2 = d3.select("body")
-	.append("div")
-	.attr("class", "tooltip2")
-	.html("[Received William E. Doctor Education Fund] " +  "<br/>" + "This map shows the locations of current projects of the NGO, Armenian Environmental Network.");
-
-	var tooltip3 = d3.select("body")
-	.append("div")
-	.attr("class", "tooltip2")
-	.html("[Received Faucett Fellowship] " +  "<br/>" + " Map geolocates where there are public and private universities in Chile and shows the percentage of women enrolled in each university.");
-
-	var tooltip4 = d3.select("body")
-	.append("div")
-	.attr("class", "tooltip2")
-	.html("[Received Faucett Fellowship] " +  "<br/>" + " Visualization shows the migration of university students when they begin attendence in Chile.");
-
-	var tooltip5 = d3.select("body")
-	.append("div")
-	.attr("class", "tooltip2")
-	.html("[Received Luskin Research Grant] " +  "<br/>" + "This web application crowdsources where there is historic building demolition in Tbilisi, Georgia.");
-
-	var tooltip6 = d3.select("body")
-	.append("div")
-	.attr("class", "tooltip2")
-	.html("[Received Luskin Research Grant]" +  "<br/>" + " This is a digital report about the web application, Restorative Buildings: Tbilisi");
-
-	var tooltip7 = d3.select("body")
-	.append("div")
-	.attr("class", "tooltip2")
-	.html("[Received Terasaki Funding]" +  "<br/>" + "This map geolocates where student photos were taken for the Terasaki Japan Trip and shows a street view of these locations.");
-
-
- 	var tooltip8 = d3.select("body")
-	.append("div")
-	.attr("class", "tooltip2")
-	.text("This report looks at the design of the iPad and examines how its simplicity is a testament to its success.");
-
- 	var tooltip9 = d3.select("body")
-	.append("div")
-	.attr("class", "tooltip2")
-	.text("Collection of past projects featuring US content.");
-
-
+	//
+	// var tooltip = d3.select("body")
+	// .append("div")
+	// .attr("class", "tooltip2")
+	// .html("[Received William E. Doctor Education Fund]" +  "<br/>" + "This map shows the locations of mining in Armenia.");
+	//
+	// var tooltip2 = d3.select("body")
+	// .append("div")
+	// .attr("class", "tooltip2")
+	// .html("[Received William E. Doctor Education Fund] " +  "<br/>" + "This map shows the locations of current projects of the NGO, Armenian Environmental Network.");
+	//
+	// var tooltip3 = d3.select("body")
+	// .append("div")
+	// .attr("class", "tooltip2")
+	// .html("[Received Faucett Fellowship] " +  "<br/>" + " Map geolocates where there are public and private universities in Chile and shows the percentage of women enrolled in each university.");
+	//
+	// var tooltip4 = d3.select("body")
+	// .append("div")
+	// .attr("class", "tooltip2")
+	// .html("[Received Faucett Fellowship] " +  "<br/>" + " Visualization shows the migration of university students when they begin attendence in Chile.");
+	//
+	// var tooltip5 = d3.select("body")
+	// .append("div")
+	// .attr("class", "tooltip2")
+	// .html("[Received Luskin Research Grant] " +  "<br/>" + "This web application crowdsources where there is historic building demolition in Tbilisi, Georgia.");
+	//
+	// var tooltip6 = d3.select("body")
+	// .append("div")
+	// .attr("class", "tooltip2")
+	// .html("[Received Luskin Research Grant]" +  "<br/>" + " This is a digital report about the web application, Restorative Buildings: Tbilisi");
+	//
+	// var tooltip7 = d3.select("body")
+	// .append("div")
+	// .attr("class", "tooltip2")
+	// .html("[Received Terasaki Funding]" +  "<br/>" + "This map geolocates where student photos were taken for the Terasaki Japan Trip and shows a street view of these locations.");
+	//
+	//
+ // 	var tooltip8 = d3.select("body")
+	// .append("div")
+	// .attr("class", "tooltip2")
+	// .text("This report looks at the design of the iPad and examines how its simplicity is a testament to its success.");
+	//
+ // 	var tooltip9 = d3.select("body")
+	// .append("div")
+	// .attr("class", "tooltip2")
+	// .text("Collection of past projects featuring US content.");
+	//
+	//
  	var tooltip10 = d3.select("body")
 	.append("div")
 	.style("position", "absolute")
@@ -62,296 +72,294 @@
 	.style("color","#000")
 	.text("BOOKS");
 
- 	var div = d3.select("body").append("div")
-		  .attr("class", "tooltip")
-		  .style("opacity", 0);
-
-
-		//Make an SVG Container
- 	var svgContainer = d3.select("body").append("svg")
-						.attr("width", 250)
-                        .attr("height", 600)
-                        .attr ("id", "rects")
-						.on("mouseover", function(){return tooltip10.style("visibility", "hidden");});
+ // 	var div = d3.select("body").append("div")
+	// 	  .attr("class", "tooltip")
+	// 	  .style("opacity", 0);
+	//
+	//
+	// 	//Make an SVG Container
+ // 	var svgContainer = d3.select("body").append("svg")
+	// 					.attr("width", 250)
+    //                     .attr("height", 600)
+    //                     .attr ("id", "rects")
+	// 					.on("mouseover", function(){return tooltip10.style("visibility", "hidden");});
 
  //Draw Rectangles
-	 var rectangle1a = svgContainer.append("rect")
-                        .attr("x", 30)
-                        .attr("y", 30)
-                        .attr("width", 95)
-                        .attr("height", 60)
-                        .attr("rx", 7)
-                        .attr("ry", 7)
-                        .on("click",  function(event) { $("#armeniamine").dialog('open');})
-                        .on("mouseover", function(){return tooltip.style("visibility", "visible");})
-						.on("mouseout", function(){return tooltip.style("visibility", "hidden");})
-											.transition()
-                      	.attr("y",350)
-  						.duration(2000) // Armenia
-  						.delay(0);
-
-  	 var rectangle1b = svgContainer.append("rect")
-                        .attr("x", 140)
-                        .attr("y", 30)
-                        .attr("width", 95)
-                        .attr("height", 60)
-                        .attr("rx", 7)
-                        .attr("ry", 7)
-                        .on("click",  function(event) { $("#aen").dialog('open');})
-                        .on("mouseover", function(){return tooltip2.style("visibility", "visible");})
-						.on("mouseout", function(){return tooltip2.style("visibility", "hidden");})
-											.transition()
-                        .transition()
-                      	.attr("y",350)
-  						.duration(2000) // AEN
-  						.delay(0);
-
-
-  	 var rectangle2a = svgContainer.append("rect")
-                        .attr("x", 30)
-                        .attr("y", -100)
-                        .attr("width", 95)
-                        .attr("height", 60)
-                        .attr("rx", 7)
-                        .attr("ry", 7)
-                        .on("click",  function(event) { $("#chileenroll").dialog('open');})
-                        .on("mouseover", function(){return tooltip3.style("visibility", "visible");})
-						.on("mouseout", function(){return tooltip3.style("visibility", "hidden");})
-											.transition()
-                        .transition()
-
-                      	.attr("y",270)
-  						.duration(2000) // Chile
-  						.delay(3750);
-
-  	 var rectangle2b = svgContainer.append("rect")
-                        .attr("x", 140)
-                        .attr("y", -100)
-                        .attr("width", 95)
-                        .attr("height", 60)
-                        .attr("rx", 7)
-                        .attr("ry", 7)
-                        .on("click",  function(event) { $("#migration").dialog('open');})
-                        .on("mouseover", function(){return tooltip4.style("visibility", "visible");})
-						.on("mouseout", function(){return tooltip4.style("visibility", "hidden");})
-											.transition()
-						.transition()
-
-                      	.attr("y",270)
-  						.duration(2000) // Chile
-  						.delay(3750);
-
-  	 var rectangle3a = svgContainer.append("rect")
-                        .attr("x", 30)
-                        .attr("y", -100)
-                        .attr("width", 95)
-                        .attr("height", 60)
-                        .attr("rx", 7)
-                        .attr("ry", 7)
-                        .on("click",  function(event) { $("#georgia").dialog('open');})
-                        .on("mouseover", function(){return tooltip5.style("visibility", "visible");})
-						.on("mouseout", function(){return tooltip5.style("visibility", "hidden");})
-                        .transition()
-                      	.attr("y",190)
-  						.duration(2000) //Georgia
-  						.delay(7250);
-
-
-  	var rectangle3b = svgContainer.append("rect")
-                        .attr("x", 140)
-                        .attr("y", -100)
-                        .attr("width", 95)
-                        .attr("height", 60)
-                        .attr("rx", 7)
-                        .attr("ry", 7)
-                      	.on("click", function(event) {
-						     $("#scroller").dialog('open');})
-                        .on("mouseover", function(){return tooltip6.style("visibility", "visible");})
-						.on("mouseout", function(){return tooltip6.style("visibility", "hidden");})
-
-                        .transition()
-                      	.attr("y",190)
-  						.duration(2000) // Georgia Scroller
-  						.delay(7250);
-
-
-  	var rectangle4 = svgContainer.append("rect")
-                        .attr("x", 30)
-                        .attr("y", -100)
-                        .attr("width", 95)
-                        .attr("height", 60)
-                        .attr("rx", 7)
-                        .attr("ry", 7)
-                        .on("click", function(event) { $("#japan").dialog('open');})
-                        .on("mouseover", function(){return tooltip7.style("visibility", "visible");})
-						.on("mouseout", function(){return tooltip7.style("visibility", "hidden");})
-
-                        .transition()
-                      	.attr("y",110)
-  						.duration(2000) // Japan
-  						.delay(10250);
-
-  	var rectangle4b = svgContainer.append("rect")
-                        .attr("x", 140)
-                        .attr("y", -100)
-                        .attr("width", 95)
-                        .attr("height", 60)
-                        .attr("rx", 7)
-                        .attr("ry", 7)
-                        .on("click", function(event) { $("#ipad").dialog('open');})
-                        .on("mouseover", function(){return tooltip8.style("visibility", "visible");})
-						.on("mouseout", function(){return tooltip8.style("visibility", "hidden");})
-                        .transition()
-                      	.attr("y",110)
-  						.duration(2000) // Device Narrative
-  						.delay(13250);
-
-
-  	var rectangle5 = svgContainer.append("rect")
-                        .attr("x", 30)
-                        .attr("y", -100)
-                        .attr("width", 200)
-                        .attr("height", 60)
-                        .attr("rx", 7)
-                        .attr("ry", 7)
-                        .on("click", function() { window.open("http://loosine.com/ancestry/usmap2.html", '_self',true) })
-                        .on("mouseover", function(){return tooltip9.style("visibility", "visible");})
-						.on("mouseout", function(){return tooltip9.style("visibility", "hidden");})
-                        .transition()
-                      	.attr("y",30)
-  						.duration(2000) // US
-  						.delay(13250);
-
-
-  	var text1a = svgContainer.append('text').text("Armenia Map")
-                .attr('x', 38)
-                .attr('y', 380)
-				.attr('opacity', 0)
-                .attr('font-family', 'Raleway')
-                .attr('font-size', 'small')
-                .attr('font-weight', 'bold')
-                .on("click",  function(event) { $("#armeniamine").dialog('open');})
-
-                .transition()
-                .attr("opacity",1)
-                .attr("fill","black")
-                .delay(2000) ;
-
-    var text1b = svgContainer.append('text').text("AEN Map")
-                .attr('x', 150)
-                .attr('y', 380)
-				.attr('opacity', 0)
-                .attr('font-family', 'Raleway')
-                .attr('font-size', 'small')
-                .attr('font-weight', 'bold')
-                .on("click",  function(event) { $("#aen").dialog('open');})
-                .transition()
-                .attr("opacity",1)
-                .attr("fill","black")
-                .delay(2000);
-
-   var text2a = svgContainer.append('text').text('Chile Map')
-                .attr('x', 40)
-                .attr('y', 300)
-                .attr('opacity', 0)
-                .attr('font-family', 'Raleway')
-                .attr('font-size', 'small')
-                .attr('font-weight', 'bold')
-                .on("click",  function(event) { $("#chilenroll").dialog('open');})
-                .transition()
-                .attr("opacity",1)
-                .attr("fill","black")
-                .duration(2000)
-  				.delay(5150);
-
-	 var text2b = svgContainer.append('text').text('Migration')
-                .attr('x', 150)
-                .attr('y', 300)
-                .attr('opacity', 0)
-                .attr('font-family', 'Raleway')
-                .attr('font-size', 'small')
-                .attr('font-weight', 'bold')
-                .on("click",  function(event) { $("#migration").dialog('open');})
-                .transition()
-                .attr("opacity",1)
-                .attr("fill","black")
-                .duration(2000)
-  				.delay(5150);
-
-
-    var text3a = svgContainer.append('text').text('Georgia Map')
-                .attr('x', 40)
-                .attr('y', 220)
-                .attr('opacity', 0)
-                .attr('font-family', 'Raleway')
-                .attr('font-size', 'small')
-                .attr('font-weight', 'bold')
-                .on("click",  function(event) { $("#georgia").dialog('open');})
-                .transition()
-                .attr("opacity",1)
-                .attr("fill","black")
-                .duration(2000)
-  				.delay(8300);
-
-   var text3b = svgContainer.append('text').text('Tbilisi')
-                .attr('x', 160)
-                .attr('y', 220)
-                .attr('opacity', 0)
-                .attr('font-family', 'Raleway')
-                .attr('font-size', 'small')
-                .attr('font-weight', 'bold')
-                .on("click",  function(event) { $("#scroller").dialog('open');})
-                .transition()
-                .attr("opacity",1)
-                .attr("fill","black")
-                .duration(2000)
-  				.delay(8300);
-
-    var text4 = svgContainer.append('text').text('Japan Map')
-                .attr('x', 40)
-                .attr('y', 150)
-                .attr('opacity', 0)
-                .attr('font-family', 'Raleway')
-                .attr('font-size', 'small')
-                .attr('font-weight', 'bold')
-                .on("click",  function(event) { $("#japan").dialog('open');})
-                .transition()
-                .attr("opacity",1)
-                .attr("fill","black")
-                .duration(2000)
-  				.delay(10890);
-
-
-    var text5 = svgContainer.append('text').text('US Maps')
-                .attr('x', 100)
-                .attr('y', 70)
-                .attr('opacity', 0)
-                .attr('font-family', 'Raleway')
-                .attr('font-size', 'small')
-                  .attr('font-weight', 'bold')
-                   .on("click", function() { window.open("http://loosine.com/ancestry/usmap2.html", '_self',true) })
-                .transition()
-                .attr("opacity",1)
-                .attr("fill","black")
-                .duration(2000) //
-  				.delay(13750);
-
-  var text5b = svgContainer.append('text').text('iPad Essay')
-                .attr('x', 150)
-                .attr('y', 150)
-                .attr('opacity', 0)
-                .attr('font-family', 'Raleway')
-                .attr('font-size', 'small')
-                  .attr('font-weight', 'bold')
-                  .on("click",  function(event) {$("#ipad").dialog('open');})
-                .transition()
-                .attr("opacity",1)
-                .attr("fill","black")
-                .duration(2000) //
-  				.delay(13750);
+  // var rectangle1a = svgContainer.append("rect")
+  //                       .attr("x", 30)
+  //                       .attr("y", 30)
+  //                       .attr("width", 95)
+  //                       .attr("height", 60)
+  //                       .attr("rx", 7)
+  //                       .attr("ry", 7)
+  //                       .on("click",  function(event) { $("#armeniamine").dialog('open');})
+  //                       .on("mouseover", function(){return tooltip.style("visibility", "visible");})
+  // 				.on("mouseout", function(){return tooltip.style("visibility", "hidden");})
+  // 									.transition()
+  //                     	.attr("y",350)
+  // 						.duration(2000) // Armenia
+  // 						.delay(0);
+  //
+  // 	 var rectangle1b = svgContainer.append("rect")
+  //                       .attr("x", 140)
+  //                       .attr("y", 30)
+  //                       .attr("width", 95)
+  //                       .attr("height", 60)
+  //                       .attr("rx", 7)
+  //                       .attr("ry", 7)
+  //                       .on("click",  function(event) { $("#aen").dialog('open');})
+  //                       .on("mouseover", function(){return tooltip2.style("visibility", "visible");})
+  // 				.on("mouseout", function(){return tooltip2.style("visibility", "hidden");})
+  // 									.transition()
+  //                       .transition()
+  //                     	.attr("y",350)
+  // 						.duration(2000) // AEN
+  // 						.delay(0);
+  //
+  //
+  // 	 var rectangle2a = svgContainer.append("rect")
+  //                       .attr("x", 30)
+  //                       .attr("y", -100)
+  //                       .attr("width", 95)
+  //                       .attr("height", 60)
+  //                       .attr("rx", 7)
+  //                       .attr("ry", 7)
+  //                       .on("click",  function(event) { $("#chileenroll").dialog('open');})
+  //                       .on("mouseover", function(){return tooltip3.style("visibility", "visible");})
+  // 				.on("mouseout", function(){return tooltip3.style("visibility", "hidden");})
+  // 									.transition()
+  //                       .transition()
+  //
+  //                     	.attr("y",270)
+  // 						.duration(2000) // Chile
+  // 						.delay(3750);
+  //
+  // 	 var rectangle2b = svgContainer.append("rect")
+  //                       .attr("x", 140)
+  //                       .attr("y", -100)
+  //                       .attr("width", 95)
+  //                       .attr("height", 60)
+  //                       .attr("rx", 7)
+  //                       .attr("ry", 7)
+  //                       .on("click",  function(event) { $("#migration").dialog('open');})
+  //                       .on("mouseover", function(){return tooltip4.style("visibility", "visible");})
+  // 				.on("mouseout", function(){return tooltip4.style("visibility", "hidden");})
+  // 									.transition()
+  // 				.transition()
+  //
+  //                     	.attr("y",270)
+  // 						.duration(2000) // Chile
+  // 						.delay(3750);
+  //
+  // 	 var rectangle3a = svgContainer.append("rect")
+  //                       .attr("x", 30)
+  //                       .attr("y", -100)
+  //                       .attr("width", 95)
+  //                       .attr("height", 60)
+  //                       .attr("rx", 7)
+  //                       .attr("ry", 7)
+  //                       .on("click",  function(event) { $("#georgia").dialog('open');})
+  //                       .on("mouseover", function(){return tooltip5.style("visibility", "visible");})
+  // 				.on("mouseout", function(){return tooltip5.style("visibility", "hidden");})
+  //                       .transition()
+  //                     	.attr("y",190)
+  // 						.duration(2000) //Georgia
+  // 						.delay(7250);
+  //
+  //
+  // 	var rectangle3b = svgContainer.append("rect")
+  //                       .attr("x", 140)
+  //                       .attr("y", -100)
+  //                       .attr("width", 95)
+  //                       .attr("height", 60)
+  //                       .attr("rx", 7)
+  //                       .attr("ry", 7)
+  //                     	.on("click", function(event) {
+  // 				     $("#scroller").dialog('open');})
+  //                       .on("mouseover", function(){return tooltip6.style("visibility", "visible");})
+  // 				.on("mouseout", function(){return tooltip6.style("visibility", "hidden");})
+  //
+  //                       .transition()
+  //                     	.attr("y",190)
+  // 						.duration(2000) // Georgia Scroller
+  // 						.delay(7250);
+  //
+  //
+  // 	var rectangle4 = svgContainer.append("rect")
+  //                       .attr("x", 30)
+  //                       .attr("y", -100)
+  //                       .attr("width", 95)
+  //                       .attr("height", 60)
+  //                       .attr("rx", 7)
+  //                       .attr("ry", 7)
+  //                       .on("click", function(event) { $("#japan").dialog('open');})
+  //                       .on("mouseover", function(){return tooltip7.style("visibility", "visible");})
+  // 				.on("mouseout", function(){return tooltip7.style("visibility", "hidden");})
+  //
+  //                       .transition()
+  //                     	.attr("y",110)
+  // 						.duration(2000) // Japan
+  // 						.delay(10250);
+  //
+  // 	var rectangle4b = svgContainer.append("rect")
+  //                       .attr("x", 140)
+  //                       .attr("y", -100)
+  //                       .attr("width", 95)
+  //                       .attr("height", 60)
+  //                       .attr("rx", 7)
+  //                       .attr("ry", 7)
+  //                       .on("click", function(event) { $("#ipad").dialog('open');})
+  //                       .on("mouseover", function(){return tooltip8.style("visibility", "visible");})
+  // 				.on("mouseout", function(){return tooltip8.style("visibility", "hidden");})
+  //                       .transition()
+  //                     	.attr("y",110)
+  // 						.duration(2000) // Device Narrative
+  // 						.delay(13250);
+  //
+  //
+  // 	var rectangle5 = svgContainer.append("rect")
+  //                       .attr("x", 30)
+  //                       .attr("y", -100)
+  //                       .attr("width", 200)
+  //                       .attr("height", 60)
+  //                       .attr("rx", 7)
+  //                       .attr("ry", 7)
+  //                       .on("click", function() { window.open("http://loosine.com/ancestry/usmap2.html", '_self',true) })
+  //                       .on("mouseover", function(){return tooltip9.style("visibility", "visible");})
+  // 				.on("mouseout", function(){return tooltip9.style("visibility", "hidden");})
+  //                       .transition()
+  //                     	.attr("y",30)
+  // 						.duration(2000) // US
+  // 						.delay(13250);
+  //
+  //
+  // 	var text1a = svgContainer.append('text').text("Armenia Map")
+  //               .attr('x', 38)
+  //               .attr('y', 380)
+  // 		.attr('opacity', 0)
+  //               .attr('font-family', 'Raleway')
+  //               .attr('font-size', 'small')
+  //               .attr('font-weight', 'bold')
+  //               .on("click",  function(event) { $("#armeniamine").dialog('open');})
+  //
+  //               .transition()
+  //               .attr("opacity",1)
+  //               .attr("fill","black")
+  //               .delay(2000) ;
+  //
+  //   var text1b = svgContainer.append('text').text("AEN Map")
+  //               .attr('x', 150)
+  //               .attr('y', 380)
+  // 		.attr('opacity', 0)
+  //               .attr('font-family', 'Raleway')
+  //               .attr('font-size', 'small')
+  //               .attr('font-weight', 'bold')
+  //               .on("click",  function(event) { $("#aen").dialog('open');})
+  //               .transition()
+  //               .attr("opacity",1)
+  //               .attr("fill","black")
+  //               .delay(2000);
+  //
+  //  var text2a = svgContainer.append('text').text('Chile Map')
+  //               .attr('x', 40)
+  //               .attr('y', 300)
+  //               .attr('opacity', 0)
+  //               .attr('font-family', 'Raleway')
+  //               .attr('font-size', 'small')
+  //               .attr('font-weight', 'bold')
+  //               .on("click",  function(event) { $("#chilenroll").dialog('open');})
+  //               .transition()
+  //               .attr("opacity",1)
+  //               .attr("fill","black")
+  //               .duration(2000)
+  // 				.delay(5150);
+  //
+  // var text2b = svgContainer.append('text').text('Migration')
+  //               .attr('x', 150)
+  //               .attr('y', 300)
+  //               .attr('opacity', 0)
+  //               .attr('font-family', 'Raleway')
+  //               .attr('font-size', 'small')
+  //               .attr('font-weight', 'bold')
+  //               .on("click",  function(event) { $("#migration").dialog('open');})
+  //               .transition()
+  //               .attr("opacity",1)
+  //               .attr("fill","black")
+  //               .duration(2000)
+  // 				.delay(5150);
+  //
+  //
+  //   var text3a = svgContainer.append('text').text('Georgia Map')
+  //               .attr('x', 40)
+  //               .attr('y', 220)
+  //               .attr('opacity', 0)
+  //               .attr('font-family', 'Raleway')
+  //               .attr('font-size', 'small')
+  //               .attr('font-weight', 'bold')
+  //               .on("click",  function(event) { $("#georgia").dialog('open');})
+  //               .transition()
+  //               .attr("opacity",1)
+  //               .attr("fill","black")
+  //               .duration(2000)
+  // 				.delay(8300);
+  //
+  //  var text3b = svgContainer.append('text').text('Tbilisi')
+  //               .attr('x', 160)
+  //               .attr('y', 220)
+  //               .attr('opacity', 0)
+  //               .attr('font-family', 'Raleway')
+  //               .attr('font-size', 'small')
+  //               .attr('font-weight', 'bold')
+  //               .on("click",  function(event) { $("#scroller").dialog('open');})
+  //               .transition()
+  //               .attr("opacity",1)
+  //               .attr("fill","black")
+  //               .duration(2000)
+  // 				.delay(8300);
+  //
+  //   var text4 = svgContainer.append('text').text('Japan Map')
+  //               .attr('x', 40)
+  //               .attr('y', 150)
+  //               .attr('opacity', 0)
+  //               .attr('font-family', 'Raleway')
+  //               .attr('font-size', 'small')
+  //               .attr('font-weight', 'bold')
+  //               .on("click",  function(event) { $("#japan").dialog('open');})
+  //               .transition()
+  //               .attr("opacity",1)
+  //               .attr("fill","black")
+  //               .duration(2000)
+  // 				.delay(10890);
+  //
+  //
+  //   var text5 = svgContainer.append('text').text('US Maps')
+  //               .attr('x', 100)
+  //               .attr('y', 70)
+  //               .attr('opacity', 0)
+  //               .attr('font-family', 'Raleway')
+  //               .attr('font-size', 'small')
+  //                 .attr('font-weight', 'bold')
+  //                  .on("click", function() { window.open("http://loosine.com/ancestry/usmap2.html", '_self',true) })
+  //               .transition()
+  //               .attr("opacity",1)
+  //               .attr("fill","black")
+  //               .duration(2000) //
+  // 				.delay(13750);
+  //
+  // var text5b = svgContainer.append('text').text('iPad Essay')
+  //               .attr('x', 150)
+  //               .attr('y', 150)
+  //               .attr('opacity', 0)
+  //               .attr('font-family', 'Raleway')
+  //               .attr('font-size', 'small')
+  //                 .attr('font-weight', 'bold')
+  //                 .on("click",  function(event) {$("#ipad").dialog('open');})
+  //               .transition()
+  //               .attr("opacity",1)
+  //               .attr("fill","black")
+  //               .duration(2000) //
+  // 				.delay(13750);
      //END BOXES//
-
-
 
 
 
@@ -360,7 +368,7 @@
     //GLOBE START//
 
 	  var width = 600,
-	  height = 500,
+	  height = 600,
 	  sens = 0.25;
 
 
@@ -376,16 +384,17 @@
 	  .projection(projection);
 
 
-	  var title = d3.select("h1");
+	  var title = d3.select("#country_label");
 
 
 	  //SVG container
 
-	  var svgContainer2 = d3.select("body").append("svg")
+	  var svgContainer2 = d3.select(".main").append("svg")
 	  .attr("width", width)
 	  .attr("height", height)
 	  .on("mouseover", function(){return tooltip10.style("visibility", "hidden");})
 	  .attr("class","globe");
+
 
   //Adding water
 
@@ -487,7 +496,7 @@ function ready(error, world,countryData, countryAll) {
     .attr("class", "country")
     .attr("d", path1)
 	.attr("id", function(d) { return "countries" + d.id; })
-    .attr("d", path)
+    .attr("d", path1)
 
     //Drag event
 
@@ -561,53 +570,6 @@ function ready(error, world,countryData, countryAll) {
     }
 //END GLOBE//
 
-//TESSELLATION START//
-
-	 var vertices = d3.range(500).map(function(d) {
-		return [Math.random() * width, Math.random() * height];
-		});
-
-	var voronoi = d3.geom.voronoi()
-		.clipExtent([[0, 0], [width, height]]);
-
-	var svg = d3.select("body").append("svg")
-		.attr ("id", "tesselate")
-		.on("click", function() { window.open("http://www.loosine.com/blog/"); })
-		.on("mousemove", function() { vertices[0] = d3.mouse(this); redraw(); })
-		.on("mouseover", function(){return tooltip10.style("visibility", "visible");})
-		.on("mouseout", function(){return tooltip10.style("visibility", "hidden");});
-
-
-	var path = svg.append("g").selectAll("path");
-
-	svg.selectAll("circle")
-		.data(vertices.slice(1))
-		.enter().append("circle")
-		.attr("transform", function(d) { return "translate(" + d + ")"; })
-		.attr("r", 3.5);
-
-	redraw();
-
-	function redraw() {
-		  path = path
-			  .data(voronoi(vertices), polygon);
-
-		  path.exit().remove();
-
-		  path.enter().append("path")
-			  .attr("class", function(d, i) { return "q" + (i % 9) + "-9"; })
-			  .attr("d", polygon);
-
-		  path.order();
-	}
-
-	function polygon(d) {
-	  return "M" + d.join("L") + "Z";
-	}
-
-
-
-//END TESSELATE//
 
 	function refreshIframe() {
 		var ifr = document.getElementsByName('chile')[0];
