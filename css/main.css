@@ -14,11 +14,11 @@ body {
 }
 
 header {
-font-family: "Raleway", sans-serif;;
+    font-family: "Raleway", sans-serif;;
   height: 300px;
   padding-top: 50px;
   background-color: #fff;
-   background-image: url("/images/gridme.png") !important;
+  background-image: url("/images/gridme.png") !important;
 
 }
 
@@ -33,14 +33,12 @@ font-family: "Raleway", sans-serif;;
 .main-nav,
 .main {
   position: relative;
-
 }
 .main-nav {
   background: #f4f4f4;
   height: 80px;
   z-index: 150;
   margin-bottom: -80px;
-
   box-shadow: 0 2px 3px rgba(0,0,0,.4);
 }
 header,.main-nav-scrolled {
@@ -51,10 +49,10 @@ header,.main-nav-scrolled {
 
 .main {
   background: #fff;
-  width:100%;
-  padding: 50px 50px 50px;
+  width:100% !important;
+  padding: 110px 50px 50px;
   background-image: url("/images/grey.png") !important;
-  background-color: #cccccc !important;
+
 
 }
 
