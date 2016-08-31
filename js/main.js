@@ -396,7 +396,7 @@ $(window).scroll(function() {
 	  .attr("class","globe");
 
 
-  //Adding water
+      //Adding water
 
 	  svgContainer2.append("path")
 		  .datum({type: "Sphere"})
@@ -528,6 +528,7 @@ function ready(error, world,countryData, countryAll) {
 
 
   (function transition() {
+
 	d3.transition()
         .duration(1850)
         .each("start", function() {
@@ -567,6 +568,37 @@ function ready(error, world,countryData, countryAll) {
 		$( "#countries840" ).click(function() {
 			window.open("http://loosine.com/ancestry/usmap2.html", '_self',true)
    		});
+
+    //     function drag {(d3.behavior.drag()
+    //       .origin(function() { var r = projection.rotate(); return {x: r[0] / sens, y: -r[1] / sens}; })
+    //   )}
+
+        d3.select(".chile").on("click", function transition(){ d3.transition()
+            .duration(1850)
+            // .each("start", function() {
+    		//   i = (i + 1) % n;
+            //   title.text(countries[1].name);
+            // })
+            // .select(title, title.text(countries[1].name) )
+            .tween("rotate", function() {
+              var p = d3.geo.centroid(countries[1]),
+                  r = d3.interpolate(projection.rotate(), [-p[0], -p[1]])
+                  title.text(countries[1].name);
+
+
+              return function(t) {
+                projection.rotate(r(t));
+    			svgContainer2.selectAll("path.country").attr("d", path1);
+    			svgContainer2.selectAll("path.land").attr("d", path1);
+              };
+            })
+
+          .transition()
+            // .each("end", transition)
+            // .each("end", d3.behavior.drag().origin(function() { var r = projection.rotate(); return {x: r[0] / sens, y: -r[1] / sens}; }));
+
+        });
+
     }
 //END GLOBE//
 
