@@ -28,18 +28,22 @@
 
         <header>
 
-			<img id="iconheader"src="http://www.loosine.com/international/logo4.png" style="z-index:-10; float:left; height:100px; padding:10px;">
-			 <!--<a href="http://loosine.com/"><img src="http://sandbox.idre.ucla.edu/up206b/2014/loosine/code/logo2.png" style= " float:left; padding-left: 5px; padding-right: 10px;width: 95px; height: 80px;" ;></a>-->
-			<h2 id ="title"> DIGITAL PORTFOLIO:LOOSINE VARTANI</h2>
-            <h4>Developer, GIS Specialist, Data Visualization Expert</h4>
-            <h5 id="contact">Contact:mail@loosine.com </h5>
+            <div id="box">
+    			<h2 id ="title"> DIGITAL PORTFOLIO:LOOSINE VARTANI</h2>
+                <h3>Developer, GIS Specialist, Data Visualization Expert</h3>
+                <h4 id="contact">Contact:mail@loosine.com </h4>
+            </div>
+
+
 
         </header>
 
         <nav class= "main-nav">
+            <img id="iconheader"src="http://www.loosine.com/international/logo4.png" style="float:left;height:80px;">
+
 				<ul class="sonarmenu">
     				<li><a href="http://loosine.com/">Home</a></li>
-    				<li id="opener"><a>About Me</a></li>
+    				<li id="opener" class="searchbychar" data-target="about_scroll"><a>About Me</a></li>
     				<li id="arcopener" ><a>Architecture</a></li>
     				<li id="gisopener"><a>GIS</a></li>
     				<li><a href="http://loosine.com/ancestry/resume.html">Resume</a></li>
@@ -53,21 +57,21 @@
             <div class="section_title">International Projects:</div>
         </div>
         <h1 id= "country_label"></h1>
-        <div class= "buttons">
-            <div class="view view-first chile">
+        <div class= "buttons block">
+            <div class="view view-first chile1 searchbychar" data-target="chile_scroll">
                  <img src="images/chile1.png" />
                  <div class="mask">
-                 <h2>Title</h2>
-                 <p>Your Text</p>
+                 <h2>Chile</h2>
+                 <p>Population</p>
                      <a href="#" class="info">Read More</a>
                  </div>
 
             </div>
-            <div class="view view-first">
+            <div class="view view-first armenia">
                  <img src="images/armenia3.png" />
                  <div class="mask">
-                 <h2>Title</h2>
-                 <p>Your Text</p>
+                 <h2>Armenia</h2>
+                 <p>Mine Map</p>
                      <a href="#" class="info">Read More</a>
                  </div>
 
@@ -75,40 +79,41 @@
             <div class="view view-first">
                  <img src="images/ipad.png" />
                  <div class="mask">
-                 <h2>Title</h2>
+                 <h2>iPad</h2>
                  <p>Your Text</p>
                      <a href="#" class="info">Read More</a>
                  </div>
 
             </div>
-            <div class="view view-first">
+            <div class="view view-first japan">
                  <img src="images/japan.png" />
                  <div class="mask">
-                 <h2>Title</h2>
-                 <p>Your Text</p>
+                 <h2>Japan</h2>
+                 <p>Teriaki Trip Photo Collage</p>
                      <a href="#" class="info">Read More</a>
                  </div>
 
             </div>
-            <div class="view view-first">
+            <div class="view view-first chile">
                  <img src="images/chile.png" />
                  <div class="mask">
-                 <h2>Title</h2>
-                 <p>Your Text</p>
+                 <h2>Chile</h2>
+                 <p>Univeristy Student Migration</p>
                      <a href="#" class="info">Read More</a>
                  </div>
 
             </div>
-            <div class="view view-first">
+            <div class="view view-first georgia">
                  <img src="images/tb.png" />
                  <div class="mask">
-                 <h2>Title</h2>
-                 <p>Your Text</p>
+                 <h2>Tbilisi</h2>
+                 <p>Digital Report</p>
                      <a href="#" class="info">Read More</a>
                  </div>
 
             </div>
         </div>
+        <div class="globe block"></div>
 		<!-- Mining -->
 		<div id="armeniamine" class="dialog" title="MINING MAP">
 				<iframe width= 500px height= 800px frameBorder="0" src="http://loosine.com/international/mines.html"></iframe>
@@ -250,7 +255,7 @@
 
 						<div id="myCarousel1" class="carousel slide" style="width:200px;">
 
-							<div class="carousel-inner">
+							<!-- <div class="carousel-inner">
 
 									<div class="item active">
 										<img src="http://sandbox.idre.ucla.edu/up206b/2014/loosine/code/photos/fire.jpg" >
@@ -291,7 +296,7 @@
 
 								<a class="left carousel-control" href="#myCarousel1" data-slide="prev">‹</a>
 								<a class="right carousel-control" href="#myCarousel1" data-slide="next">›</a>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
@@ -468,26 +473,33 @@
 
 		</div>
 
-		<div id="aboutme" style ="width:700px;"title="ABOUT ME">
-			<img src="images/drawing8.png" id="about" style="position:absolute; right:10px; top:0px; width:600px;">
-			<p style="width:400px; font-family:Raleway; position:absolute; top:180px; left:300px font-size:15px;"> I am fascinated by cartographic representations of data and digital story-telling. I work to articulate complex subject matter through visualization methods –using statistical programming, data analysis, GIS mapping, and web design to communicate important data patterns through graphical representations. Particularly I am motivated by research relating to urban discussions for equitable community development, social justice, and sustainability.
-			</p>
-			<p style="width:400px; font-family:Raleway; position:absolute; top:385px; left:300px font-size:15px;">
-				When I am not making maps, I like to surf, hike, and watch the Oprah Winfrey Show. Also, I read mystery novels and practice my backstroke, reliving high school swim relay races, whenever I get the chance.
-			</p>
 
-
-		</div>
 		<p id="explore">[DRAG TO EXPLORE]</p>
+        <div id="chile_scroll">
+            <div class="section_title"> Chile Student Population</div>
+            <iframe frameBorder="0" width= 600px height= 1000px src="http://loosine.com/international/chilewomen.html"></iframe>
+
+        </div>
+        <div id="about_scroll">
+                <div class="section_title"> About Me: </div>
+                    <img src="images/drawing10.png" id="aboutimg"  style="">
+                    <div class="abouttext">
+            			<p>
+                            I am fascinated by cartographic representations of data and digital story-telling. I work to articulate complex subject matter through visualization methods –using statistical programming, data analysis, GIS mapping, and web design to communicate important data patterns through graphical representations. Particularly I am motivated by research relating to urban discussions for equitable community development, social justice, and sustainability.
+            			</p>
+            			<p>
+            			     When I am not making maps, I like to surf, hike, and watch the Oprah Winfrey Show. Also, I read mystery novels and practice my backstroke, reliving high school swim relay races, whenever I get the chance.
+            			</p>
+                    </div>
+
+
+
+        </div>
+
 	</div>
 
 
 
-	<!-- <footer class="site-footer">
-			<div class="container1"
-			<p class="muted credit" style="text-align:center;color:grey;"><hr width="1" size="500">Contact:mail@loosine.com</p>
-			</div>
-    </footer> -->
 
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="http://d3js.org/queue.v1.min.js"></script>
