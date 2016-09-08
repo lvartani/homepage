@@ -18,7 +18,43 @@ $(document).on('click','.searchbychar', function(event) {
         scrollTop: $(target).offset().top
     }, 1500);
 });
+$(document).on('click','.searchbychar_fast', function(event) {
+    event.preventDefault();
+    var target = "#" + this.getAttribute('data-target');
+    $('html, body').animate({
+        scrollTop: $(target).offset().top
+    }, 1500);
+});
 
+$(".next_buttons").click(function(){
+    $("#area").load("us_page/index.html #area > *");
+    var src = 'us_page/js/usmain.js';
+    // $('#js_switch').src = src;
+    window.open("http://localhost:8000","_self",true);
+
+
+    // $.getScript(src, function () {
+    //     console.log('script is loaded');
+    // });
+    //
+    // return false;
+    });
+$("#japan_link").click(function(){
+    //window.open("http://www.loosine.com/international/japan.html");
+    setTimeout('window.open(\'http://www.loosine.com/international/japan.html\')');
+
+});
+
+$("#inf_link").click(function(){
+    //window.open("http://www.loosine.com/international/japan.html");
+    setTimeout('window.open(\'http://loosine.com/informal_settlements\')');
+
+});
+$("#georgia_link").click(function(){
+    //window.open("http://www.loosine.com/international/japan.html");
+    setTimeout('window.open(\'http://www.loosine.com/blog/?page_id=36\')');
+
+});
 
  	var tooltip10 = d3.select("body")
 	.append("div")
@@ -43,7 +79,7 @@ $(document).on('click','.searchbychar', function(event) {
 
     //GLOBE START//
 
-	  var width = 600,
+	  var width = 530,
 	  height = 600,
 	  sens = 0.25;
 
@@ -51,7 +87,7 @@ $(document).on('click','.searchbychar', function(event) {
   //Setting projection
 
 	  var projection = d3.geo.orthographic()
-	  .scale(245)
+	  .scale(235)
 	  .rotate([0, 0])
 	  .translate([width / 2, height / 2])
 	  .clipAngle(90);
@@ -288,67 +324,34 @@ function ready(error, world,countryData, countryAll) {
         d3.select(".japan").on("click", function(d,i){
             click_transition(3);
         });
-        d3.select(".usa").on("click", function(d,i){
-            click_transition(5);
+        d3.select(".stopspin").on("click", function(d,i){
+            click_transition(4);
         });
 
     }
 //END GLOBE//
 
+    //
+	// function refreshIframe() {
+	// 	var ifr = document.getElementsByName('chile')[0];
+	// 	ifr.src = ifr.src;
+	// }
+    //
+	// function refreshIframe2() {
+	// 	var ifr = document.getElementsByName('armenia')[0];
+	// 	ifr.src = ifr.src;
+	// }
+    //
+	// function refreshIframe3() {
+	// 	var ifr = document.getElementsByName('architecturef')[0];
+	// 	ifr.src = ifr.src;
+	// }
+    //
+	// function refreshIframe4() {
+	// 	var ifr = document.getElementsByName('gisf')[0];
+	// 	ifr.src = ifr.src;
+	// }
 
-	function refreshIframe() {
-		var ifr = document.getElementsByName('chile')[0];
-		ifr.src = ifr.src;
-	}
-
-	function refreshIframe2() {
-		var ifr = document.getElementsByName('armenia')[0];
-		ifr.src = ifr.src;
-	}
-
-	function refreshIframe3() {
-		var ifr = document.getElementsByName('architecturef')[0];
-		ifr.src = ifr.src;
-	}
-
-	function refreshIframe4() {
-		var ifr = document.getElementsByName('gisf')[0];
-		ifr.src = ifr.src;
-	}
-
-
-
-  $(function() {
-    $( "#aboutme" ).dialog({
-    	dialogClass: 'dialogWithDropShadow',
-		autoOpen: false,
-  		modal:true,
-		show: {
-			effect: "",
-			duration: 500
-		},
-		hide: {
-			effect: "",
-			duration: 1000
-		},
-		width: 700,
-		height: 500,
-		draggable: true,
-		open: function(ev, ui){
-              $('.ui-widget-overlay').addClass('custom-overlay');
-          },
-
-	    close: function() {
-	        $('.ui-widget-overlay').removeClass('custom-overlay');
-	    },
-
-		resizable: true
-    	});
-
-    $( "#opener" ).click(function() {
-		$( "#aboutme" ).dialog( "open" );
-		});
-     });
 
 
 	$(function() {
@@ -553,6 +556,13 @@ function ready(error, world,countryData, countryAll) {
 			$( "#more1").click(function() {
 			  $( "#moreinfo" ).toggle( "slow" );
 			});
+            // "src="http://loosine.com/international/chilemigration.html"
+            $(".chile1").click(function(){
+                $("#chile_frame").attr('src','http://loosine.com/international/chilemigration.html').delay(800);
+            });
+            $(".chile").click(function(){
+                $("#chile_frame").attr('src','http://loosine.com/international/chilemigration.html').delay(800);
+            });
 
 	});
 

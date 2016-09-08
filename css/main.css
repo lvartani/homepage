@@ -1,3 +1,11 @@
+@media screen and (max-width: 1125px) {
+   .block {
+       display: inline-block;
+       text-align: center;
+  }
+}
+
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -17,7 +25,7 @@ header {
 font-family: "Raleway", sans-serif;;
   height: 300px;
   padding-top: 50px;
-  background-color: #fff;
+  background-color: none;
   background-image: url("/images/urbanspace2.png") !important;
   text-align: center;
 }
@@ -27,7 +35,8 @@ font-family: "Raleway", sans-serif;;
 
 }
 #iconheader{
-
+    box-shadow: 1px 1px 5px #888888;
+    height: 80px;
     margin: auto;
     /*border: 3px solid lightgrey;*/
     background: white;
@@ -42,7 +51,7 @@ font-family: "Raleway", sans-serif;;
     min-width:600px;
     letter-spacing:4px;
     display: inline;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 #contact{
 
@@ -65,11 +74,58 @@ header,.main-nav-scrolled {
 }
 
 .main {
-  background: #fff;
+  background: none;
   width:100% !important;
-  padding: 110px 50px 50px;
+
+  padding: 1px 1px 1px;
   background-image: url("/images/grey.png") !important;
 
+}
+.arrow{
+    height:60px;
+    opacity: 0.7;
+    float:right;
+
+}
+.next{
+
+    width:450px;
+    text-align: center;
+
+}
+
+.next_buttons{
+    font-family: Cabin Sketch !important;
+    font-size: 34px;
+    float: right;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.back_up{
+    width:50%;
+    text-align: center;
+}
+.back{
+    height: 50px;
+    text-align: center;
+    opacity: 0.8;
+    float: right;
+    cursor: pointer;
+    content: url('/images/up-arrow.svg');
+}
+.back:hover{
+    fill:blue
+}
+
+.back_text{
+    font-family: Cabin Sketch !important;
+    font-size: 30px;
+    float: right;
+    cursor: pointer;
+}
+#area{
+
+text-align: center;
 }
 #content{
     position:relative;
@@ -88,7 +144,7 @@ header,.main-nav-scrolled {
     border: none;
     text-decoration: none;
     font-size: 55px;
-    display: inline-block;
+
 
 }
 .section_buttons{
@@ -96,8 +152,9 @@ header,.main-nav-scrolled {
 }
 
  #country_label{
-  position:relative;
-  top: 550px;
+  position:absolute;
+  bottom:30px;
+  right:10px;
 
   font-family: 'Raleway' !important;
   font-size: 35px;
@@ -110,6 +167,8 @@ header,.main-nav-scrolled {
     /*position: absolute;*/
     text-align: center;
     display: inline;
+    position: relative;
+    padding:0;
 
     }
 
@@ -155,14 +214,14 @@ header,.main-nav-scrolled {
   border-radius:10px;
 }
 
-path {
+/*path {
   stroke: rgba(225,227,216,0.8);
   stroke-width: 2px;
 }
 
 path:first-child {
   fill: aliceblue !important;
-}
+}*/
 
 circle {
   fill: #FFFFFF;
@@ -240,7 +299,7 @@ padding-right:10px;
 }*/
 
 #div1 {
-    font-family:Arial;
+    font-family:Raleway;
     font-size:25px;
     color:orange;
     margin: 3px;
@@ -249,7 +308,7 @@ padding-right:10px;
   }
 
  #div2 {
-    font-family:Arial;
+    font-family:Raleway;
     font-size:15px;
     color:steelblue;
     margin: 3px;
@@ -554,14 +613,14 @@ font-size: small;
 }
 
 .buttons{
-    width:700px;
+    width:600px;
     position:relative;
     float: left:
     display:inline;
 }
 
 .view {
-    width: 300px;
+    width: 275px;
     height: 200px;
     margin: 10px;
     float: left;
@@ -574,7 +633,7 @@ font-size: small;
     /*background: #fff url(../images/bgimg.jpg) no-repeat center center*/
 }
 .view .mask, .view .content {
-    width: 300px;
+    width: 275px;
     height: 200px;
     position: absolute;
     overflow: hidden;
@@ -601,11 +660,11 @@ font-size: small;
     margin: 20px 0 0 0
 }
 .view p {
-    font-family: Georgia, serif;
-    font-style: italic;
-    font-size: 12px;
+    font-family: Raleway, sans-serif;
+    font-style: normal;;
+    font-size: 13px;
     position: relative;
-    color: #fff;
+    color: #000;
     padding: 10px 20px 20px;
     text-align: center
 }
@@ -627,7 +686,7 @@ font-size: small;
 }
 .view-first .mask {
     opacity: 0;
-    background-color: rgba(5,5,5, 0.7);
+    background-color: rgba(240,248,255, 0.7);
     transition: all 0.4s ease-in-out;
 }
 .view-first h2 {
@@ -662,7 +721,7 @@ font-size: small;
 .view-first:hover a.info {
     transition-delay: 0.2s;
 }
-#chile_scroll {
+#chile_scroll,#chile_scrollB, #armenia_scroll {
     display: none;
     position: relative;
     text-align: center;
@@ -671,14 +730,14 @@ font-size: small;
 #about_scroll{
     text-align: center;
     width: 800px;
-margin-left: auto;
-   margin-right: auto;
-
+    margin-left: auto;
+    margin-right: auto;
+    /*background-image: url("/images/gridme.png") !important;*/
 
 }
 
 .block{
-    display: inline-block;
+    /*display: inline-block;*/
 }
 #aboutimg{
     text-align: center;
@@ -689,7 +748,32 @@ margin-left: auto;
 .abouttext{
      /*float: left;
     display: inline-block;
-
     margin-right: 8px;*/
 
+}
+.stopspin{
+    position: absolute;
+    bottom: 0px;
+    right:10px;
+
+}
+
+
+.center{
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+.content_center{
+    text-align: center;
+    margin-right: 10px
+    margin-left:10px;
+    display: inline;
+
+
+}
+.frames{
+    overflow-y: hidden;
+    padding: 15px;
+    text-align: center;
 }
