@@ -14,7 +14,7 @@ $(document).on('click','.searchbychar', function(event) {
     event.preventDefault();
     var target = "#" + this.getAttribute('data-target');
     $(target).show();
-    $('html, body').delay(1000).animate({
+    $('html, body').delay(500).animate({
         scrollTop: $(target).offset().top
     }, 1500);
 });
@@ -41,18 +41,16 @@ $(".next_buttons").click(function(){
     });
 $("#japan_link").click(function(){
     //window.open("http://www.loosine.com/international/japan.html");
-    setTimeout('window.open(\'http://www.loosine.com/international/japan.html\')');
+    setTimeout('window.open(\'http://www.loosine.com/international/japan.html\'), 1500');
 
 });
 
 $("#inf_link").click(function(){
-    //window.open("http://www.loosine.com/international/japan.html");
-    setTimeout('window.open(\'http://loosine.com/informal_settlements\')');
+    setTimeout('window.open(\'http://loosine.com/informal_settlements\'),');
 
 });
 $("#georgia_link").click(function(){
-    //window.open("http://www.loosine.com/international/japan.html");
-    setTimeout('window.open(\'http://www.loosine.com/blog/?page_id=36\')');
+    setTimeout('window.open(\'http://www.loosine.com/blog/?page_id=36\', 1500)');
 
 });
 
@@ -337,20 +335,6 @@ function ready(error, world,countryData, countryAll) {
 	// 	ifr.src = ifr.src;
 	// }
     //
-	// function refreshIframe2() {
-	// 	var ifr = document.getElementsByName('armenia')[0];
-	// 	ifr.src = ifr.src;
-	// }
-    //
-	// function refreshIframe3() {
-	// 	var ifr = document.getElementsByName('architecturef')[0];
-	// 	ifr.src = ifr.src;
-	// }
-    //
-	// function refreshIframe4() {
-	// 	var ifr = document.getElementsByName('gisf')[0];
-	// 	ifr.src = ifr.src;
-	// }
 
 
 
@@ -419,113 +403,13 @@ function ready(error, world,countryData, countryAll) {
      });
 
 
-	  $(function() {
-		$( ".dialog" ).dialog({
-			  autoOpen: false,
-				modal:false,
-				dialogClass: 'dialogWithDropShadow',
-
-			  show: {
-				effect: "slide",
-				duration: 500
-			  },
-			  hide: {
-				effect: "slide",
-				duration: 1000
-			  },
-			  width: 900,
-			  height: 500,
-			  draggable: true,
-			  resizable: true
-			});
-		});
-
-	  $(function() {
-			$( ".dialog2" ).dialog({
-			  autoOpen: false,
-				modal:false,
-				dialogClass: 'dialogWithDropShadow',
-			  show: {
-				effect: "slide",
-				duration: 500
-			  },
-			  hide: {
-				effect: "slide",
-				duration: 1000
-			  },
-			  width: 900,
-			  height: 300,
-			  draggable: true,
-			  resizable: true
-				});
-		});
-
-	   $(function() {
-			$( ".dialog3" ).dialog({
-			  autoOpen: false,
-				modal:false,
-
-				dialogClass: 'dialogWithDropShadow',
-			  open: function(ev, ui){
-					 $('#scrollertest').attr('src','http://www.loosine.com/blog/?page_id=36');
-				  },
-
-			  show: {
-				effect: "slide",
-				duration: 500
-			  },
-			  hide: {
-				effect: "slide",
-				duration: 1000
-			  },
-
-			  width: 900,
-			  height: 600,
-			  draggable: true,
-			  resizable: true
-				});
-			});
-
-		 $(function() {
-			$( ".dialog4" ).dialog({
-				autoOpen: false,
-					modal:false,
-
-				dialogClass: 'dialogWithDropShadow',
-				  open: function(ev, ui){
-						 $("#ipadtest").attr('src',"http://www.scrollkit.com/s/3KNeU4l");
-					  },
-
-				show: {
-					effect: "slide",
-
-					duration: 500
-					},
-				hide: {
-				effect: "slide",
-				duration: 1000
-				},
-
-				  width: 900,
-				  height: 600,
-				  draggable: true,
-				  resizable: true
-					});
-				});
-
-
-
-		 $(function() {
-			$( "#mymodal9" ).draggable();
-
-			});
 
 
 	$(document).ready(function () {
-			  $( ".icon3").click(function() {
-			  $( ".drop" ).toggle( "slow" );
-
-			});
+			//   $( ".icon3").click(function() {
+			//   $( ".drop" ).toggle( "slow" );
+            //
+			// });
 
 			$( ".icon2").click(function() {
 			  $( ".drop2" ).toggle( "slow" );
@@ -536,33 +420,33 @@ function ready(error, world,countryData, countryAll) {
 			  $( ".drop" ).toggle( "slow" );
 			});
 
-
-			$( ".photos").click(function() {
-			  $( ".container" ).toggle( "slow" );
-			});
-
-			$( ".icon5").click(function() {
-			  $( ".container" ).toggle( "slow" );
-			});
-
-			$( ".datasource").click(function() {
-			  $( ".data" ).toggle( "slow" );
-			});
-
-			$( ".icon4").click(function() {
-			  $( ".data" ).toggle( "slow" );
-			});
-
-			$( "#more1").click(function() {
-			  $( "#moreinfo" ).toggle( "slow" );
-			});
-            // "src="http://loosine.com/international/chilemigration.html"
-            $(".chile1").click(function(){
-                $("#chile_frame").attr('src','http://loosine.com/international/chilemigration.html').delay(800);
-            });
-            $(".chile").click(function(){
-                $("#chile_frame").attr('src','http://loosine.com/international/chilemigration.html').delay(800);
-            });
+            //
+			// $( ".photos").click(function() {
+			//   $( ".container" ).toggle( "slow" );
+			// });
+            //
+			// $( ".icon5").click(function() {
+			//   $( ".container" ).toggle( "slow" );
+			// });
+            //
+			// $( ".datasource").click(function() {
+			//   $( ".data" ).toggle( "slow" );
+			// });
+            //
+			// $( ".icon4").click(function() {
+			//   $( ".data" ).toggle( "slow" );
+			// });
+            //
+			// $( "#more1").click(function() {
+			//   $( "#moreinfo" ).toggle( "slow" );
+			// });
+            // // "src="http://loosine.com/international/chilemigration.html"
+            // $(".chile1").click(function(){
+            //     $("#chile_frame").attr('src','http://loosine.com/international/chilemigration.html').delay(800);
+            // });
+            // $(".chile").click(function(){
+            //     $("#chile_frame").attr('src','http://loosine.com/international/chilemigration.html').delay(800);
+            // });
 
 	});
 

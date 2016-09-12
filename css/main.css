@@ -26,7 +26,7 @@ font-family: "Raleway", sans-serif;;
   height: 300px;
   padding-top: 50px;
   background-color: none;
-  background-image: url("/images/urbanspace2.png") !important;
+  background-image: url("/images/urbanspace3.png") !important;
   text-align: center;
 }
 #box{
@@ -35,7 +35,7 @@ font-family: "Raleway", sans-serif;;
 
 }
 #iconheader{
-    box-shadow: 1px 1px 5px #888888;
+    /*box-shadow: 0.5px 0.5px 0.5px #888888;*/
     height: 80px;
     margin: auto;
     /*border: 3px solid lightgrey;*/
@@ -111,7 +111,8 @@ header,.main-nav-scrolled {
     opacity: 0.8;
     float: right;
     cursor: pointer;
-    content: url('/images/up-arrow.svg');
+    content: url('/images/curved-arrow.svg');
+    margin-right: 10px;
 }
 .back:hover{
     fill:blue
@@ -125,7 +126,7 @@ header,.main-nav-scrolled {
 }
 #area{
 
-text-align: center;
+/*text-align: center;*/
 }
 #content{
     position:relative;
@@ -668,6 +669,10 @@ font-size: small;
     padding: 10px 20px 20px;
     text-align: center
 }
+
+.view p.small_text{
+    font-size: 11px;
+}
 .view a.info {
     display: inline-block;
     text-decoration: none;
@@ -721,10 +726,10 @@ font-size: small;
 .view-first:hover a.info {
     transition-delay: 0.2s;
 }
-#chile_scroll,#chile_scrollB, #armenia_scroll {
+#chile_scroll,#chile_scrollB, #armenia_scroll, #georgia_scroll, #japan_scroll, #globe_scroll {
     display: none;
     position: relative;
-    text-align: center;
+    /*text-align: center;*/
 
 }
 #about_scroll{
@@ -753,19 +758,27 @@ font-size: small;
 }
 .stopspin{
     position: absolute;
-    bottom: 0px;
+    /*bottom: 0px;*/
+    font-family: Coming Soon;
+    font-weight: bold;
+    border:
     right:10px;
-
+    font-size: 16px;
+    cursor: pointer;
 }
 
-
+.stopspin:hover{
+    color:steelblue;
+    background-color: aliceblue;
+    border-radius: 5%;
+}
 .center{
     width: 100%;
     text-align: center;
     position: relative;
 }
 .content_center{
-    text-align: center;
+    /*text-align: center;*/
     margin-right: 10px
     margin-left:10px;
     display: inline;
@@ -777,3 +790,67 @@ font-size: small;
     padding: 15px;
     text-align: center;
 }
+.summary{
+    width:700px;
+
+    margin:auto;
+    font-family: 'Coming Soon', 'Raleway';
+    position:relative;
+}
+
+
+/*.built{
+    content:url('http://loosine.com/international/line2.png');
+    float:left
+}*/
+.header{
+    font-weight: bold;
+    font-family: Raleway;
+
+}
+
+._frame{
+    display:block;
+    margin-left: auto;
+    margin-right: auto
+}
+.drawing{
+    opacity: 0.7;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width:650px;
+    position absolute;
+
+}
+.button_d{
+    background-color: #f89687;
+    height:50px;
+    opacity: 1.0;
+}
+.button_d:hover{
+    background-color: #000;
+
+}
+.drawing_content{
+    position: relative;
+    opacity: 1.0;
+}
+.drawing_link{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size:25px;
+    color: white;
+    font-family: Raleway;
+    text-align: center;
+}
+.drawing_link:hover{
+    color:white;
+    text-decoration:none;
+}
+/*a:visited{
+    text-decoration:none !important;
+    color:black !important;
+}*/

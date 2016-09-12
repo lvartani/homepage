@@ -22,6 +22,8 @@
         <link href='http://fonts.googleapis.com/css?family=Raleway:600' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
+
 
 
     </head>
@@ -43,7 +45,7 @@
 
 				<ul class="sonarmenu">
     				<li><a href="http://loosine.com/">Home</a></li>
-    				<li id="opener" class="searchbychar" data-target="about_scroll"><a>About Me</a></li>
+    				<li id="opener" class="searchbychar_fast" data-target="about_scroll"><a>About Me</a></li>
     				<li id="arcopener" ><a>Architecture</a></li>
     				<li id="gisopener"><a>GIS</a></li>
     				<li><a href="http://loosine.com/ancestry/resume.html">Resume</a></li>
@@ -65,59 +67,67 @@
                     <div class= "buttons block">
                         <div class="next"><img class="arrow"src="images/right-arrow.svg"> <p class="next_buttons">Go to US Projects</p></div>
 
-                        <div class="view view-first chile1 searchbychar" data-target="chile_scrollB">
+                        <div class="view view-first chile1">
                              <img src="images/chile1.png" />
                              <div class="mask">
-                             <h2>Chile</h2>
-                             <p>Population</p>
-                                 <!-- <a href="#" class="info">Read More</a> -->
+                             <h2>University Population</h2>
+                             <p>Chile <br>
+                             Awarded Faucett Fellowship</p>
+                                 <a href="#" class="info searchbychar" data-target="chile_scrollB">Read More</a>
                              </div>
 
                         </div>
-                        <div class="view view-first chile searchbychar" data-target="chile_scroll">
+                        <div class="view view-first chile">
                              <img src="images/chile.png" />
                              <div class="mask">
-                             <h2>Chile</h2>
-                             <p>Univeristy Student Migration</p>
-                                 <!-- <a href="#" class="info">Read More</a> -->
+                             <h2>Migration</h2>
+                             <p>Chile <br>
+                            Awarded Faucett Fellowship</p>
+                                 <a href="#" class="info searchbychar" data-target="chile_scroll">Read More</a>
                              </div>
 
                         </div>
 
-                        <div class="view view-first infset" data-target="">
+                        <div class="view view-first infset">
                              <img src="images/earth.png" />
                              <div class="mask">
-                             <h2>Global Settlements</h2>
-                             <p>Your Text</p>
-                                 <a href="#" id="inf_link"class="info">Link</a>
+                             <h2>Settlement Mapper</h2>
+                             <p>Global Locations</p>
+                                 <a href="#" class="info searchbychar" data-target="globe_scroll">Read More</a>
                              </div>
 
                         </div>
-                        <div class="view view-first japan" data-target="">
+                        <div class="view view-first japan">
                              <img src="images/japan.png" />
                              <div class="mask">
-                             <h2>Japan</h2>
-                             <p>Teriaki Trip Photo Collage</p>
-                                 <a id="japan_link"href="#" class="info">Link</a>
+                             <h2>Photo Journal</h2>
+                             <p class="small_text">Japan<br>
+                                 Received Teraski Foundation Funding
+                             </p>
+                                 <a href="#" class="info searchbychar"  data-target="japan_scroll">Read More</a>
                              </div>
 
                         </div>
 
-                        <div class="view view-first armenia searchbychar" data-target="armenia_scroll">
+                        <div class="view view-first armenia ">
                              <img src="images/armenia3.png" />
                              <div class="mask">
-                             <h2>Armenia</h2>
-                             <p>Mine Map</p>
-                                 <!-- <a href="#" class="info">Read More</a> -->
+                             <h2>Mine Map</h2>
+                             <p class="small_text">Armenia <br>
+                                 Recieved William E. Doctor Education Fund
+                             </p>
+                                 <a href="#" class="info searchbychar" data-target="armenia_scroll">Read More</a>
                              </div>
 
                         </div>
-                        <div class="view view-first georgia" data-target="">
+                        <div class="view view-first georgia">
                              <img src="images/tb.png" />
                              <div class="mask">
-                             <h2>Tbilisi</h2>
-                             <p>Digital Report</p>
-                                 <a id ="georgia_link"href="#" class="info">Link</a>
+                             <h2>Digital Report</h2>
+                             <p class="small_text">Tbilisi, Georgia <br>
+                                 Received Luskin Research Grant
+                             </p>
+                                 <a href="#" class="info searchbychar" data-target="georgia_scroll">Read More</a>
                              </div>
 
                         </div>
@@ -128,7 +138,7 @@
                     <div class="globe block">
                         <h1 id= "country_label"></h1>
 
-                        <button type="button" class ="stopspin btn btn-success">Stop Spin</button>
+                        <!-- <p class ="stopspin">STOP SPIN</p> -->
                         <!-- <p id="explore">[DRAG TO EXPLORE]</p> -->
                     </div>
 
@@ -141,8 +151,16 @@
             <div id="chile_scroll">
                     <div class="section_title"> Chile Student Population</div>
                     <div class="content_center">
+                        <div class="summary">
 
-                        <iframe id ="chile_frame"frameBorder="0" width= 600px height= 800px scrolling="no"></iframe>
+                                <p><b class="header">About: </b>With news of mass protests in Chile by students for education reform, I wanted to see where university students were coming from. Were they coming from mostly urban regions or rural areas? This diagram shows that most students are from the Santiago, Chile and the ones that are migrating, are relocating overwhelmingly to the metropolitan center of Chile.
+                                </p>
+                                <p><b class="header">Skills: </b>D3 JavaScipt Library, jQuery, Bootstrap </p>
+                                <p><b class="header">Data: </b>Data from Consejo de Rectores/ Anuario Estadistico 2012</p>
+
+
+                        </div>
+                        <iframe id ="chile_frame"class="_frame"frameBorder="0" width= 600px height= 800px scrolling="no"></iframe>
                         <br>
                         <div class="back_up">
                             <p class="searchbychar_fast back_text" data-target="area">Back</p>
@@ -154,7 +172,16 @@
             <div id="chile_scrollB">
                 <div class="section_title"> Chile Women Student Population</div>
                 <div class="content_center">
-                    <iframe frameBorder="0" width= 600px height= 700px scrolling="no" src="http://loosine.com/international/chilewomen.html"></iframe>
+                    <div class="summary">
+
+                            <p><b class="header">About: </b>When Chilean president Michelle Bachelet was elected in 2006, gender issues were front and center in the country and more women historically were enrolled in college. I wanted to see the percentages of women enrolled in both public and private universities in Chile.
+                            </p>
+                            <p><b class="header">Skills: </b>D3 JavaScipt Library, jQuery, Bootstrap </p>
+                            <p><b class="header">Data: </b>Data from Consejo de Rectores/ Anuario Estadistico 2012</p>
+
+
+                    </div>
+                    <iframe class="_frame" frameBorder="0" width= 600px height= 700px scrolling="no" src="http://loosine.com/international/chilewomen.html"></iframe>
                     <br>
                     <div class="back_up">
                         <p class="searchbychar_fast back_text" data-target="area">Back</p>
@@ -165,9 +192,19 @@
             <div id="armenia_scroll">
                 <div class="section_title"> Armenian Mine Data and Environmental Projects</div>
                 <div class="content_center">
+                    <div class="summary">
+
+                            <p><b class="header">About: </b>According to a study by the Republic of Armenia's RA National Academy of Sciences’ Center for Ecological-Noosphere Studies, mining in Armenia has been ruinous for Armenia. Mining operators have failed to neutralize dangerous contaminants which have been absorbed by the ground. The pollutants then pass from the ground to agricultural produce and then to humans. A majority of the population may be living in contaminated conditions due to pollutants from the ground.  As most of the mining done in Armenia is illegal, there is the call to geographically locate these exploited mines as a means for residents to discover nearby locations and become more aware of potential health risks.
+                            </p>
+                            <p><b class="header">Skills: </b>D3 JavaScipt Library, jQuery (Left) Bootstrap, Excel, Google Fusion Tables, Fusion Tables Layer Wizard (Right)</p>
+                            <p><b class="header">Data: </b>Data from Acopian Center for the Environment and Armenian Development Agency Research, 2011</p>
+
+
+                    </div>
                         <iframe class ="frames" scrolling="no" style ="float:left;"frameBorder="0" width= 600px height= 700px src="http://loosine.com/international/mines.html"></iframe>
                         <iframe class="frames"  scrolling="no"  frameBorder="0" width= 600px height= 700px src="http://loosine.com/international/AEN.html"></iframe>
                         <br>
+
                         <div class="back_up">
                             <p class="searchbychar_fast back_text" data-target="area">Back</p>
                             <img class ="searchbychar_fast back" data-target="area">
@@ -175,300 +212,108 @@
                 </div>
             </div>
 
+
+            <div id="georgia_scroll">
+                <div class="section_title"> Tbilisi Digital Report</div>
+                <div class="content_center">
+                    <div class="summary">
+
+                            <p><b class="header">About: </b>Looking at the impetus for the youth revolt in Georgia, during the Rose Revolution, this report is interested in looking at the how technology has the potential to be catalyst for knowledge distribution and engaged citizenry in the country today.
+
+                            </p>
+                            <p><b class="header">Skills: </b>WordPress, Scrollkit, HTML, CSS </p>
+                            <p><b class="header">Data: </b>Crowdsourced Data and Various News Sources</p>
+
+
+                    </div>
+
+                    <div class="drawing_content">
+                        <img class="drawing" src="images/tbilisi_drawing.jpeg">
+                        <div class="drawing button_d"><a class="drawing_link"href="http://www.loosine.com/blog/?page_id=36" target="_blank">Go to Report</a></div>
+                    </div>
+                    <br>
+                    <div class="back_up">
+                        <p class="searchbychar_fast back_text" data-target="area">Back</p>
+                        <img class ="searchbychar_fast back"data-target="area">
+                    </div>
+                </div>
+            </div>
+            <div id="japan_scroll">
+                <div class="section_title"> Japan Photo Journal</div>
+                <div class="content_center">
+                    <div class="summary">
+
+                            <p><b class="header">About: </b> This map traces back the footsteps taken during my 2014 Japan trip with the UCLA School of Public Policy. The trip took place in Tohoku, Toyko, and Kyoto. In Tohoku, we looked at the disaster relief efforts after the 2011 Tsunami. We observed the reconstruction efforts and the city planning efforts to house the 500,000 displaced local population.
+                            </p>
+                            <p><b class="header">Skills: </b>Picasa API, Google Maps </p>
+                            <p><b class="header">Data: </b>Geographic data from iPhoto library</p>
+                            <p><b class="header">Thanks: </b>Yoh Kawano</p>
+
+
+                    </div>
+
+                         <div class="drawing_content">
+                             <img class="drawing"src="images/japan_drawing.jpeg">
+                             <div class="drawing button_d"><a class="drawing_link"href="http://www.loosine.com/international/japan.html" target="_blank">Go to Map</a></div>
+                         </div>
+
+                    <br>
+                    <div class="back_up">
+                        <p class="searchbychar_fast back_text" data-target="area">Back</p>
+                        <img class ="searchbychar_fast back"data-target="area">
+                    </div>
+                </div>
+            </div>
+
+            <div id="globe_scroll">
+                <div class="section_title"> Informal Settlement Mapper</div>
+                <div class="content_center">
+                    <div class="summary">
+
+                            <p><b class="header">About: </b>  The United Nations Development Programme defines informal settlements as residential areas where housing units have been constructed on
+                                land to which the occupants have no legal claim. Therefore posing problems of sanitation, health, overcrowding, and violence to the residing population. Through Google satellite view and UNDP data, this project involves researching and geolocating these informal settlements or slums throughout the world. Bounds or extents of the settlements are visible through exploration of the satelite view in the application.
+                            </p>
+                            <p><b class="header">Skills: </b>Fusion Tables, Fusion Layer Wizard, Google Maps, Bootstrap </p>
+                            <p><b class="header">Data: </b>United Nations Development Programme 2010 and CIA World Factbook API </p>
+
+
+                    </div>
+                    <div class="drawing_content">
+                        <img class="drawing" src="images/globe_drawing.png">
+                        <div class="drawing button_d"><a class="drawing_link"href="http://loosine.com/informal_settlements/" target="_blank">Go to Map</a></div>
+                    </div>
+
+                    <br>
+                    <div class="back_up">
+                        <p class="searchbychar_fast back_text" data-target="area">Back</p>
+                        <img class ="searchbychar_fast back"data-target="area">
+                    </div>
+                </div>
+            </div>
+
         </div>
 		<!-- Mining -->
-		<!-- <div id="armeniamine" class="dialog" title="MINING MAP">
-				<iframe width= 500px height= 800px frameBorder="0" src="http://loosine.com/international/mines.html"></iframe>
 
-				<div class="side">
+        <!-- Chile Women Enroll display:none -->
 
-							<div class="icon">
-							<img border="0" class="built" src="http://loosine.com/international/line2.png" style="float:left"></div>
-								<h4 class="built" style="font-family:Raleway;cursor:pointer;font-size:15px;">BUILT WITH</h4>
-							<p class="drop">D3 Javascript Library</p>
-							<p class="drop">Data Mining</p>
-							<p class="drop">Bootstrap</p>
-							<p class="drop">JQuery</p>
-							<br>
-							<div class="icon" >
-							<img border="0" class="icon2"class="built" src="http://loosine.com/international/line2.png" style="float:left"></div>
-								<h4 class="more" style="font-family:Raleway;cursor:pointer;font-size:15px">ABOUT</h4>
-							<p style="width:250px; font-size:10px;"class="drop2">According to a study by the Republic of Armenia's RA National Academy of Sciences’ Center for Ecological-Noosphere Studies,
-											mining in Armenia has been ruinous for Armenia in terms of public health and the environment.Mining operators have failed to neutralize
-											dangerous contaminants which have been absorbed by the ground. The pollutants then pass from the ground to agricultural produce and then to humans.
-											 57% of Yerevan's population, the capital city and most populous region,  may be living in contaminated conditions due to ground pollution. Additionally, the country’s rural fields are being irrigated with water flowing
-											 from contaminated sources due to mining operations. Near copper processing plants, emission of sulfar dioxide, exceeds 15-20 times the maximum permissible concentrations in the ambient air, a serious hazard to human health. Also, according to the study by the RA National Academy of Sciences, all types of farm produce from the towns of Kapan, Kajaran, Alaverdi, and Akhtala (all of which
-											have significant mining operations) are laden with heavy metals, including mercury arsenic and cadmium. As most of the mining done in Armenia is illegal, there is the call to geographically locate these exploited mines for residents to discover nearby locations and ascertain their risks from these mines.  </p>
-
-							<br>
-								<div class="icon">
-								<img border="0" class="datasouce" src="http://loosine.com/international/line2.png" style="float:left"></div>
-								<h4 class="datasource" style="font-family:Raleway;cursor:pointer;font-size:15px">DATA SOURCE</h4>
-								<p class="data" style="color:grey; font-family:Raleway;width:250px;">*Data from Acopian Center for the Environment and Armenian Development Agency Research, 2011</p>
-							<br>
-							<div class="icon">
-								<img border="0" class="photos" src="http://loosine.com/international/line2.png" style="float:left">
-							</div>
-								<h4 class="photos" style="font-family:Raleway;cursor:pointer;font-size:15px">PHOTOS</h4>
-
-							<div class="container" style="width:250px;">
-								<div class="row">
-									<div class="span12" style=" padding-left:10;">
-
-										 <div id="myCarousel" class="carousel slide" style="width:250px;">
-
-											<div class="carousel-inner">
-
-												<div class="item active">
-													<img src="http://loosine.com/international/images/mine1.jpg" width="350px">
-													<div class="carousel-caption">
-														 <h5>Alaverdi Copper Smelter</h5>
-													</div>
-												</div>
-												<div class="item">
-													<img src="http://loosine.com/international/images/mine2.jpg" width="350px" >
-													<div class="carousel-caption">
-														 <h5>Forest near Teghut Mine</h5>
-												  </div>
-												</div>
-
-												<div class="item">
-													<img src="http://loosine.com/international/images/mine3.JPG" >
-													<div class="carousel-caption">
-														 <h5>Copper-Molybdenum Mine</h5>
-													</div>
-												</div>
-
-												  <div class="item">
-													<img src="http://loosine.com/international/images/mine4.jpg" >
-													<div class="carousel-caption">
-													<h5>Sulfur-Dioxide Emission</h5>
-
-													</div>
-												</div>
-												<a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-												<a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
-
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-
-
-				</div>
-
-		</div> -->
-
-     <!-- AEN -->
-	<!-- <div id="aen" class="dialog"  title="AEN PROJECT MAP">
-
-    	<iframe name= "armenia" frameBorder="0" width= 600px height= 1000px src="http://loosine.com/international/AEN.html"></iframe>
-			<div class="side">
-				<div class="icon">
-				<img border="0" class="built" src="http://loosine.com/international/line2.png" style="float:left"></div>
-					<h4 class="built" style="font-family:Raleway;cursor:pointer;">BUILT WITH</h4>
-				<p class="drop">Excel</p>
-				<p class="drop">Google Fusion Tables</p>
-				<p class="drop">Fusion Tables Layer Wizard</p>
-				<br>
-				<div class="icon" >
-				<img border="0" class="icon2"class="built" src="http://loosine.com/international/line2.png" style="float:left"></div>
-					<h4 class="more" style="font-family:Raleway;cursor:pointer;">ABOUT</h4>
-				<p style="width:200px;"class="drop2">This is a map of Armenia using Google Fusion Tables and map tiles that pinpoints locations of AEN (Armenian Environmental Network) projects and events in Armenia. </p>
-
-
-
-			<button  type="button" button class="btn btn-primary" style= "background-color:black;"onclick="refreshIframe2();">Refresh</button>
-
-			</div>
-	</div> -->
-
-      <!-- Chile Women Enroll  -->
-	<div id="chileenroll" class="dialog"  title="CHILEAN UNIVERSITY ENROLLMENT">
-
-		<iframe frameBorder="0" width= 600px height= 1000px src="http://loosine.com/international/chilewomen.html"></iframe>
-
-
-		<div class="side">
-
-			<div class="icon">
-				<img border="0" class="built" src="http://loosine.com/international/line2.png" style="float:left"></div>
-					<h4 class="built" style="font-family:Raleway;cursor:pointer;font-size:15px;">BUILT WITH</h4>
-				<p class="drop">D3 Javascript Library</p>
-				<p class="drop">Data Mining</p>
-				<p class="drop">Bootstrap</p>
-				<p class="drop">JQuery</p>
-				<br>
-
-			<div class="icon4">
-				<img border="0" class="datasouce" src="http://loosine.com/international/line2.png" style="float:left"></div>
-				<h4 class="datasource" style="font-family:Raleway;cursor:pointer;font-size:15px">DATA SOURCE</h4>
-			<p class="data" style="width: 200px;">* Data from Consejo de Rectores/ Anuario Estadistico 2012 </p>
-			<br>
-			<div class="icon">
-				<img border="0" class="photos" src="http://loosine.com/international/line2.png" style="float:left"></div>
-				<h4 class="photos" style="font-family:Raleway;cursor:pointer;font-size:15px">PHOTOS</h4>
-
-		   <div class="container" style="width:200px;">
-				<div class="row">
-					<div class="span12" style=" padding-left:10;">
-
-						<div id="myCarousel1" class="carousel slide" style="width:200px;">
-
-							<!-- <div class="carousel-inner">
-
-									<div class="item active">
-										<img src="http://sandbox.idre.ucla.edu/up206b/2014/loosine/code/photos/fire.jpg" >
-										<div class="carousel-caption">
-
-
-											<p style="font-size:10px;">The students are demanding a strictly not-for-profit education system that is free for everyone.</p>
-										</div>
-									</div>
-
-									<div class="item">
-										<img src="http://sandbox.idre.ucla.edu/up206b/2014/loosine/code/photos/march.jpg" >
-										<div class="carousel-caption">
-
-
-											<p style="font-size:10px;">La educación no cabe en tu Moneda. Marcha por la Educación, 14 de julio de 2011</p>
-										</div>
-									</div>
-
-									<div class="item">
-										<img src="http://sandbox.idre.ucla.edu/up206b/2014/loosine/code/photos/statue.jpg" >
-										<div class="carousel-caption">
-
-
-											<p style="font-size:10px;">March for Public Education, June 30, Santiago, Chile. Andrés Bello, founder and first Rector of the University of Chile, with revolutionary costume..</p>
-										</div>
-									</div>
-
-
-									<div class="item">
-										<img src="http://sandbox.idre.ucla.edu/up206b/2014/loosine/code/photos/posterchileprotest.jpg" >
-										<div class="carousel-caption">
-
-										 </div>
-
-									</div>
-
-
-								<a class="left carousel-control" href="#myCarousel1" data-slide="prev">‹</a>
-								<a class="right carousel-control" href="#myCarousel1" data-slide="next">›</a>
-							</div> -->
-						</div>
-					</div>
-				</div>
-			</div>
-
-		 </div>
-
-    </div>
-
-
-	   <!-- Chile Migration  -->
-
-    <div id="migration" class="dialog" title="CHILEAN UNIVERSITY MIGRATION">
-    	<br>
-
-
-    	 <br></br>
-    	<iframe name="chile" width= 600px height= 1000px frameBorder="0" src="http://loosine.com/international/chilemigration.html"></iframe>
-
-		<div class= "side">
-    		<div class="icon">
-			<img border="0" class="built" src="http://loosine.com/international/line2.png" style="float:left"></div>
-				<h4 class="built" style="font-family:Raleway;cursor:pointer;font-size:15px;">BUILT WITH</h4>
-			<p class="drop">D3 Javascript Library</p>
-			<p class="drop">Data Mining</p>
-			<p class="drop">Bootstrap</p>
-			<p class="drop">JQuery</p>
-			<br>
-
-			<div class="icon4">
-				<img border="0" class="datasouce" src="http://loosine.com/international/line2.png" style="float:left"></div>
-				<h4 class="datasource" style="font-family:Raleway;cursor:pointer;font-size:15px">DATA SOURCE</h4>
-			<p class="data" style="width:200px;">* Data from Consejo de Rectores/ Anuario Estadistico 2012 </p>
-
-			<br>
-			<div class="icon">
-			<img border="0" class="icon2"class="built" src="http://loosine.com/international/line2.png" style="float:left"></div>
-				<h4 class="more" style="font-family:Raleway;cursor:pointer;font-size:15px">ABOUT</h4>
-			<p style= "color:#000; width:200px;" class="drop2"> With news of mass protests in Chile by students for education reform, I wanted to see where university students were coming from. Were they coming from mostly urban regions or rural areas? This diagram shows that most students are from the Santiago, Chile and the ones that are migrating, are relocating overwhelmingly to the metropolitan center of Chile.</p>
-			<button  type="button" button class="btn btn-primary" style="background-color:black; " onclick="refreshIframe();">See Migration</button>
-    	</div>
-
-	</div>
-
+	   <!-- Chile Migration display:none -->
 
 	   <!-- Georgia -->
 
-    <div id="georgia" class="dialog2" title="CROWDSOURCED TBILISI MAP">
-    	<img src="http://loosine.com/ancestry/images/tbilisiimage.jpg" width="600px" style="float:left;">
-    	<div class="side">
-			<div class="icon">
-			<img border="0" class="built" src="http://loosine.com/international/line2.png" style="float:left"></div>
-				<h4 class="built" style="font-family:Raleway;cursor:pointer;font-size:15px;">BUILT WITH</h4>
-			<p class="drop">Ushahidi</p>
-
-			<br>
-			<div class="icon" >
-			<img border="0" class="icon2"class="built" src="http://loosine.com/international/line2.png" style="float:left"></div>
-				<h4 class="more" style="font-family:Raleway;cursor:pointer;font-size:15px">ABOUT</h4>
-
-			<p class="drop2" style="width:200px;"> Crowdsourced map using the Ushahidi Platform showing demolition locations in Tbilisi, Georgia. </p>
-
-			<a href="https://historictbilisi.crowdmap.com/"> <input type="button"  button class="btn btn-primary" style="background-color:black;"value="Tbilsi Site" /></a>
-		</div>
-     </div>
-
 		<!-- Scroller Georgia-->
 
-		<div id="scroller" class="dialog3" title="APPLIED PLANNING PROJECT-DIGITAL ESSAY">
-			<iframe id="scrollertest" name="scrollertest"  style="width:1250px; height:2000px;  -ms-zoom: 0.7; -moz-transform: scale(0.7); -moz-transform-origin: 0px 0; -o-transform: scale(0.7); -o-transform-origin: 0 0; -webkit-transform: scale(0.7); -webkit-transform-origin: 0 0;"></iframe>
-		</div>
-
         <!-- Scroller IPAD -->
-		<div id="ipad" class="dialog4" title="IPAD DIGITAL ESSAY">
-			<iframe id="ipadtest"style="width:1250px; height:2000px;  -ms-zoom: 0.7; -moz-transform: scale(0.7); -moz-transform-origin: 0px 0; -o-transform: scale(0.7); -o-transform-origin: 0 0; -webkit-transform: scale(0.7); -webkit-transform-origin: 0 0;" ></iframe>
-		</div>
 
 		<!-- Japan-->
-		<div id="japan" class="dialog2" title="DIGITAL PHOTO COLLAGE">
-
-			<img src="http://loosine.com/international/japanmap2.png" width="600px" style="float:left;">
-
-			<div class="side">
-			<div class="icon">
-				<img border="0" class="built" src="http://loosine.com/international/line2.png" style="float:left"></div>
-					<h4 class="built" style="font-family:Raleway;cursor:pointer;font-size:15px;">BUILT WITH</h4>
-				<p class="drop">Picasa</p>
-				<p class="drop">JQuery</p>
-				<p class="drop">Google API</p>
-				<p class="drop">Bootstrap</p>
-
-				<br>
-
-			<div class="icon" >
-			<img border="0" class="icon2"class="built" src="http://loosine.com/international/line2.png" /style="float:left"></div>
-					<h4 class="more" style="font-family:Raleway;cursor:pointer;font-size:15px">ABOUT</h4>
-			<p style="width:200px" class="drop2"> Photo Collage of Terasaki Funded Japan Trip. Special Thanks to Yoh Kawano for help and source code for application.</p>
-			<a href="http://www.loosine.com/international/japan.html"> <input type="button" button class="btn btn-primary"  style="background-color:black;" value="Photo Collage" /></a>
-			</div>
-		</div>
 
 		<!-- Architecture-->
-
 		<div id="arcbook" title="UNDERGRADUATE PORTFOLIO" >
 			<table style="width:500px;position:relative; left:100px;">
 			<tr>
 			  <td>
 			  <div class="icon">
 				<img border="0" class="built" src="http://loosine.com/international/line2.png" style="float:left"></div>
-					<h4 class="built" style="font-family:Raleway;cursor:pointer;font-size:15px;">BUILT WITH</h4>
+					<h4  class="built" style="font-family:Raleway;cursor:pointer;font-size:15px;">BUILT WITH</h4>
 
 			  </td>
 			  <td>
@@ -489,14 +334,13 @@
 
 			  <td>
 			  <p class="drop2" style="width:200px;">  My undergraduate degree was Architectural Studies with a minor in Global Studies. This is a portfolio of all the studio and non-profit work I completed during this time.</p>
-			</tr>
+            </td>
+            </tr>
 
 			</table>
+			 <iframe name="arcf" id="arcf" width= 1280px height= 470px style="top:-50px;"frameBorder="0" src=""></iframe>
 
-			<!---<button  type="button" button class="btn btn-primary" style="background-color:black;position:absolute;top:70px; right:50px;"onclick="refreshIframe3();">Refresh</button>--->
-			<iframe name="arcf"id="arcf" width= 1280px height= 470px style="top:-50px;"frameBorder="0" src=""></iframe>
-
-		</div>
+		</div> -->
 
 		<!-- GIS-->
 
@@ -548,8 +392,6 @@
             			     When I am not making charts or maps, I like to surf, hike, and watch tv game shows. Also, I read mystery novels and practice my backstroke, reliving high school swim relay races, whenever I get the chance.
             			</p>
                     </div>
-
-
 
         </div>
 
