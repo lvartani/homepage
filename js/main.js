@@ -227,11 +227,30 @@ function ready(error, world,countryData, countryAll) {
       countryTooltip.style("opacity", 0)
       .style("display", "none");
     })
+    .on("click", function(d){
+        console.log(d);
+        if(d.name=="Georgia") {
+            scroll_country(georgia_scroll);
+        }
+        else if(d.name=="Armenia"){
+            scroll_country(armenia_scroll);
+        }
+        else if(d.name=="Chile"){
+            scroll_country(chile_scroll);
+        }
+        else if(d.name=="Japan"){
+            scroll_country(japan_scroll);
+        }
+        else if(d.name=="United States"){
+            window.open("#");
+        }
+
+    })
     .on("mousemove", function(d) {
       countryTooltip.style("left", (d3.event.pageX + 7) + "px")
       .style("top", (d3.event.pageY - 15) + "px")
       // title.text(countries[i].name).style("visability", "hidden");
-	
+
     });
 
 
@@ -260,35 +279,35 @@ function ready(error, world,countryData, countryAll) {
         .each("end", transition);
   })();
 
-		$( "#countries152" ).click(function() {
-            $("#chile_scroll").show();
-            $('html, body').animate({
-                   scrollTop: $("#chile_scroll").offset().top
-               }, 1000);
-
-			});
-		$( "#countries51" ).click(function() {
-            $("#armenia_scroll").show();
-            $('html, body').animate({
-                   scrollTop: $("#armenia_scroll").offset().top
-               }, 1000);
-			});
-		$( "#countries268" ).click(function() {
-            $("#georgia_scroll").show();
-            $('html, body').animate({
-                   scrollTop: $("#georgia_scroll").offset().top
-               }, 1000);
-			});
-		$( "#countries392" ).click(function() {
-            $("#japan_scroll").show();
-            $('html, body').animate({
-                   scrollTop: $("#japan_scroll").offset().top
-               }, 1000);
-
-		      });
-		$( "#countries840" ).click(function() {
-			window.open("http://loosine.com/ancestry/usmap2.html", '_self',true)
-   		   });
+		// $( "#countries152" ).click(function() {
+        //     $("#chile_scroll").show();
+        //     $('html, body').animate({
+        //            scrollTop: $("#chile_scroll").offset().top
+        //        }, 1000);
+        //
+		// 	});
+		// $( "#countries51" ).click(function() {
+        //     $("#armenia_scroll").show();
+        //     $('html, body').animate({
+        //            scrollTop: $("#armenia_scroll").offset().top
+        //        }, 1000);
+		// 	});
+		// $( "#countries268" ).click(function() {
+        //     $("#georgia_scroll").show();
+        //     $('html, body').animate({
+        //            scrollTop: $("#georgia_scroll").offset().top
+        //        }, 1000);
+		// 	});
+		// $( "#countries392" ).click(function() {
+        //     $("#japan_scroll").show();
+        //     $('html, body').animate({
+        //            scrollTop: $("#japan_scroll").offset().top
+        //        }, 1000);
+        //
+		//       });
+		// $( "#countries840" ).click(function() {
+		// 	window.open("http://loosine.com/ancestry/usmap2.html", '_self',true)
+  //  		   });
 
         d3.select(".infset").on("click", function(d){
             d3.selectAll(".land").style("stroke", "white").style("stroke-width","2");
@@ -347,6 +366,12 @@ function ready(error, world,countryData, countryAll) {
             click_transition(4);
         });
 
+    }
+    function scroll_country(scroll){
+        $(scroll).show();
+        $('html, body').animate({
+               scrollTop: $(scroll).offset().top
+           }, 1000);
     }
 //END GLOBE//
 
