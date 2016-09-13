@@ -26,10 +26,9 @@ $(document).on('click','.searchbychar_fast', function(event) {
     }, 1500);
 });
 
-$(".next_buttons").click(function(){
-    $("#area").load("us_page/index.html #area > *");
+$(".next").click(function(){
+    // $("#area").load("http://loosine.com #area > *");
     var src = 'us_page/js/usmain.js';
-    // $('#js_switch').src = src;
     window.open("http://localhost:8000","_self",true);
 
 
@@ -232,7 +231,7 @@ function ready(error, world,countryData, countryAll) {
       countryTooltip.style("left", (d3.event.pageX + 7) + "px")
       .style("top", (d3.event.pageY - 15) + "px")
       // title.text(countries[i].name).style("visability", "hidden");
-	  .on("click",  function(event) { $("#chileenroll").dialog('open');});
+	
     });
 
 
@@ -262,22 +261,44 @@ function ready(error, world,countryData, countryAll) {
   })();
 
 		$( "#countries152" ).click(function() {
-			$("#chileenroll").dialog('open');
-				});
+            $("#chile_scroll").show();
+            $('html, body').animate({
+                   scrollTop: $("#chile_scroll").offset().top
+               }, 1000);
+
+			});
 		$( "#countries51" ).click(function() {
-			$("#armeniamine").dialog('open');
-		});
-
+            $("#armenia_scroll").show();
+            $('html, body').animate({
+                   scrollTop: $("#armenia_scroll").offset().top
+               }, 1000);
+			});
 		$( "#countries268" ).click(function() {
-			$("#scroller").dialog('open');
-		});
-
+            $("#georgia_scroll").show();
+            $('html, body').animate({
+                   scrollTop: $("#georgia_scroll").offset().top
+               }, 1000);
+			});
 		$( "#countries392" ).click(function() {
-			$("#japan").dialog('open');
-		});
+            $("#japan_scroll").show();
+            $('html, body').animate({
+                   scrollTop: $("#japan_scroll").offset().top
+               }, 1000);
+
+		      });
 		$( "#countries840" ).click(function() {
 			window.open("http://loosine.com/ancestry/usmap2.html", '_self',true)
-   		});
+   		   });
+
+        d3.select(".infset").on("click", function(d){
+            d3.selectAll(".land").style("stroke", "white").style("stroke-width","2");
+        });
+        d3.select(".infset").on("mouseover", function(d){
+            d3.selectAll(".land").style("stroke", "white").style("stroke-width","2");
+        });
+        d3.select(".infset").on("mouseout", function(d){
+            d3.selectAll(".land").style("stroke", "lightgrey").style("stroke-width","1");
+        });
 
         function stop_transition() {
             console.log("stop");
@@ -406,54 +427,19 @@ function ready(error, world,countryData, countryAll) {
 
 
 	$(document).ready(function () {
-			//   $( ".icon3").click(function() {
-			//   $( ".drop" ).toggle( "slow" );
-            //
-			// });
 
 			$( ".icon2").click(function() {
 			  $( ".drop2" ).toggle( "slow" );
-
 			});
-
-			  $( ".built").click(function() {
+			$( ".built").click(function() {
 			  $( ".drop" ).toggle( "slow" );
 			});
+            $( ".more" ).click(function() {
+              $( ".drop2" ).toggle( "slow" );
+            });
 
-            //
-			// $( ".photos").click(function() {
-			//   $( ".container" ).toggle( "slow" );
-			// });
-            //
-			// $( ".icon5").click(function() {
-			//   $( ".container" ).toggle( "slow" );
-			// });
-            //
-			// $( ".datasource").click(function() {
-			//   $( ".data" ).toggle( "slow" );
-			// });
-            //
-			// $( ".icon4").click(function() {
-			//   $( ".data" ).toggle( "slow" );
-			// });
-            //
-			// $( "#more1").click(function() {
-			//   $( "#moreinfo" ).toggle( "slow" );
-			// });
-            // // "src="http://loosine.com/international/chilemigration.html"
-            // $(".chile1").click(function(){
-            //     $("#chile_frame").attr('src','http://loosine.com/international/chilemigration.html').delay(800);
-            // });
-            // $(".chile").click(function(){
-            //     $("#chile_frame").attr('src','http://loosine.com/international/chilemigration.html').delay(800);
-            // });
-
-	});
-
-	$(document).ready(function () {
-		$( ".more" ).click(function() {
-		  $( ".drop2" ).toggle( "slow" );
-		});
-
+            $(".chile").click(function(){
+                $("#chile_frame").attr('src','http://loosine.com/international/chilemigration.html').delay(800);
+            });
 
 	});

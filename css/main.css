@@ -91,6 +91,7 @@ header,.main-nav-scrolled {
 
     width:450px;
     text-align: center;
+    cursor: pointer;
 
 }
 
@@ -100,6 +101,7 @@ header,.main-nav-scrolled {
     float: right;
     margin-right: 15px;
     margin-left: 15px;
+
 }
 .back_up{
     width:50%;
@@ -761,7 +763,10 @@ font-size: small;
     /*bottom: 0px;*/
     font-family: Coming Soon;
     font-weight: bold;
-    border:
+    right:10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding:5px;
     right:10px;
     font-size: 16px;
     cursor: pointer;
@@ -770,7 +775,8 @@ font-size: small;
 .stopspin:hover{
     color:steelblue;
     background-color: aliceblue;
-    border-radius: 5%;
+    border: 2px solid steelblue;
+
 }
 .center{
     width: 100%;
@@ -792,7 +798,6 @@ font-size: small;
 }
 .summary{
     width:700px;
-
     margin:auto;
     font-family: 'Coming Soon', 'Raleway';
     position:relative;
@@ -824,7 +829,7 @@ font-size: small;
 
 }
 .button_d{
-    background-color: #f89687;
+    background-color: #f38a81;
     height:50px;
     opacity: 1.0;
 }
@@ -840,9 +845,9 @@ font-size: small;
     display:block;
     margin-left: auto;
     margin-right: auto;
-
+    text-decoration:none !important;
     font-size:25px;
-    color: white;
+    color: white !important;
     font-family: Raleway;
     text-align: center;
 }
@@ -850,7 +855,11 @@ font-size: small;
     color:white;
     text-decoration:none;
 }
-/*a:visited{
+a:visited{
     text-decoration:none !important;
-    color:black !important;
-}*/
+
+}
+a:active{
+    text-decoration:none !important;
+
+}
