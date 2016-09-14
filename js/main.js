@@ -29,8 +29,7 @@ $(document).on('click','.searchbychar_fast', function(event) {
 $(".next").click(function(){
     // $("#area").load("http://loosine.com #area > *");
     var src = 'us_page/js/usmain.js';
-    window.open("http://localhost:8000","_self",true);
-
+    window.open("http://loosine.com/us_projects","_self",true);
 
     // $.getScript(src, function () {
     //     console.log('script is loaded');
@@ -38,6 +37,10 @@ $(".next").click(function(){
     //
     // return false;
     });
+
+$("#resume").click(function(){
+     $("#area").load("resume.html #area > *");
+});
 $("#japan_link").click(function(){
     //window.open("http://www.loosine.com/international/japan.html");
     setTimeout('window.open(\'http://www.loosine.com/international/japan.html\'), 1500');
@@ -206,7 +209,7 @@ function ready(error, world,countryData, countryAll) {
     .attr("class", "country")
     .attr("d", path1)
 	.attr("id", function(d) { return "countries" + d.id; })
-    .attr("d", path1)
+
 
     //Drag event
 
@@ -242,7 +245,7 @@ function ready(error, world,countryData, countryAll) {
             scroll_country(japan_scroll);
         }
         else if(d.name=="United States"){
-            window.open("#");
+            window.open("http://loosine.com/us_projects");
         }
 
     })
@@ -253,61 +256,81 @@ function ready(error, world,countryData, countryAll) {
 
     });
 
+    d3.csv("cities.csv", function(data) {
+       var cities = svgContainer2.append("g")
+        cities.selectAll("path.point")
+            .data(data)
+            .enter()
+            .append("path")
+            // .pointRadius(function(d){return d.radius})
+            .datum(function(d) {
+               return {type: "Point", coordinates: [d.lon, d.lat], rank:d.rank, name:d.place, radius:d.projects, population:d.population};
+            })
 
+            .attr("class", "point")
+
+            .attr("d", path1)
+
+            .style("fill", "yellow")
+            .style("opacity", 0.75)
+            .call(d3.behavior.drag()
+            .origin(function() { var r = projection.rotate(); return {x: r[0] / sens, y: -r[1] / sens}; })
+            .on("drag", function() {
+                 transitioning = false;
+                  var rotate = projection.rotate();
+                  projection.rotate([d3.event.x * sens, -d3.event.y * sens, rotate[2]]);
+                  svgContainer2.selectAll("path").attr("d", path1);
+
+                }))
+
+
+          .on("mouseover", function (d) {
+
+               d3.select(this).style("fill","black");
+               console.log(d);
+               countryTooltip.text(d.name)
+               .style("left", (d3.event.pageX + 7) + "px")
+               .style("top", (d3.event.pageY - 15) + "px")
+               .style("display", "block")
+               .style("opacity", 1);
+
+
+           })
+           .on("mouseout", function(d){
+
+               d3.select(this).style("fill","yellow");
+               countryTooltip.style("opacity", 0)
+               .style("display", "none");
+
+           })
+        });
 
 
   (function transition() {
 
-  d3.transition()
-        .duration(1850)
-        .each("start", function() {
-    title.text(countries[i = (i + 1) % n].name);
-        console.log(n);
+      d3.transition()
+            .duration(1850)
+            .each("start", function() {
+        title.text(countries[i = (i + 1) % n].name);
+            console.log(n);
 
-        })
-        .tween("rotate", function() {
-          var p = d3.geo.centroid(countries[i]),
-              r = d3.interpolate(projection.rotate(), [-p[0], -p[1]]);
-              return function(t) {
-                projection.rotate(r(t));
-    			svgContainer2.selectAll("path.country").attr("d", path1);
-    			svgContainer2.selectAll("path.land").attr("d", path1);
-              };
-        })
+            })
+            .tween("rotate", function() {
+              var p = d3.geo.centroid(countries[i]),
+                  r = d3.interpolate(projection.rotate(), [-p[0], -p[1]]);
+                  return function(t) {
+                    projection.rotate(r(t));
+        			svgContainer2.selectAll("path.country").attr("d", path1);
+        			svgContainer2.selectAll("path.land").attr("d", path1);
+                    svgContainer2.selectAll("path.point").attr("d", path1);
+                  };
+            })
 
-      .transition()
-        .each("end", transition);
-  })();
+          .transition()
+            .each("end", transition);
+      })();
 
-		// $( "#countries152" ).click(function() {
-        //     $("#chile_scroll").show();
-        //     $('html, body').animate({
-        //            scrollTop: $("#chile_scroll").offset().top
-        //        }, 1000);
-        //
-		// 	});
-		// $( "#countries51" ).click(function() {
-        //     $("#armenia_scroll").show();
-        //     $('html, body').animate({
-        //            scrollTop: $("#armenia_scroll").offset().top
-        //        }, 1000);
-		// 	});
-		// $( "#countries268" ).click(function() {
-        //     $("#georgia_scroll").show();
-        //     $('html, body').animate({
-        //            scrollTop: $("#georgia_scroll").offset().top
-        //        }, 1000);
-		// 	});
-		// $( "#countries392" ).click(function() {
-        //     $("#japan_scroll").show();
-        //     $('html, body').animate({
-        //            scrollTop: $("#japan_scroll").offset().top
-        //        }, 1000);
-        //
-		//       });
-		// $( "#countries840" ).click(function() {
-		// 	window.open("http://loosine.com/ancestry/usmap2.html", '_self',true)
-  //  		   });
+
 
         d3.select(".infset").on("click", function(d){
             d3.selectAll(".land").style("stroke", "white").style("stroke-width","2");
@@ -337,6 +360,7 @@ function ready(error, world,countryData, countryAll) {
                 projection.rotate(r(t));
     			svgContainer2.selectAll("path.country").attr("d", path1);
     			svgContainer2.selectAll("path.land").attr("d", path1);
+                svgContainer2.selectAll("path.point").attr("d", path1);
               };
             })
           .transition()
@@ -366,7 +390,11 @@ function ready(error, world,countryData, countryAll) {
             click_transition(4);
         });
 
+
+
     }
+
+
     function scroll_country(scroll){
         $(scroll).show();
         $('html, body').animate({

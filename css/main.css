@@ -26,7 +26,7 @@ font-family: "Raleway", sans-serif;;
   height: 300px;
   padding-top: 50px;
   background-color: none;
-  background-image: url("/images/urbanspace3.png") !important;
+  background-image: url("urbanspace3.png") !important;
   text-align: center;
 }
 #box{
@@ -78,7 +78,7 @@ header,.main-nav-scrolled {
   width:100% !important;
 
   padding: 1px 1px 1px;
-  background-image: url("/images/grey.png") !important;
+  background-image: url("grey.png") !important;
 
 }
 .arrow{
@@ -113,7 +113,7 @@ header,.main-nav-scrolled {
     opacity: 0.8;
     float: right;
     cursor: pointer;
-    content: url('/images/curved-arrow.svg');
+    content: url('curved-arrow.svg');
     margin-right: 10px;
 }
 .back:hover{
@@ -199,7 +199,7 @@ header,.main-nav-scrolled {
 }
 
 .country:hover {
-  fill:#FFFF99;
+  fill:white;
   stroke-width: 1.2px;
 }
 
@@ -863,3 +863,38 @@ a:active{
     text-decoration:none !important;
 
 }
+
+/*Resume Style*/
+#iconheader{
+    float:left;
+}
+.objective{
+    margin-top: 100px;
+}
+.area_resume{
+    margin-left: 40px !important;
+    margin-right:40px !important;
+    font-family: Raleway!important;
+}
+#school3, #school4{
+    font-size:12px;
+    padding-left: 20px;
+}
+td{
+    padding:10px;
+}
+.b{
+ margin-right: 10px;
+}
+.job:hover{
+    color:navy;
+    cursor: pointer;
+}
+
+.title{
+    color:darkorange !important;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/*Resume Style*/
