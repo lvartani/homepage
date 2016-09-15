@@ -16,30 +16,28 @@ html, body {
 
 body {
   margin: 0;
-  padding-top: 250px;
-  font-family: "Raleway";
+  padding-top: 100px;
+  font-family: "Cabin";
 
 }
 
 header {
-font-family: "Raleway", sans-serif;;
-  height: 300px;
+font-family: "Abril Fatface", sans-serif;;
+  height: 150px;
   padding-top: 50px;
-  background-color: none;
-  background-image: url("urbanspace3.png") !important;
+  background-color: #FBB03B;
+  /*background-image: url("urbanspace3.png") !important;*/
   text-align: center;
 }
 #box{
-    background: rgba(255,255,255,0.7);
-    padding:10px;
-
+    display:inline-block;;
 }
 #iconheader{
     /*box-shadow: 0.5px 0.5px 0.5px #888888;*/
-    height: 80px;
+    height: 60px;
     margin: auto;
     /*border: 3px solid lightgrey;*/
-    background: white;
+
     padding:10px;
 }
 
@@ -47,7 +45,7 @@ font-family: "Raleway", sans-serif;;
     text-align: center;
     padding-left: 0px;
     padding-top:10px;
-    font-size: 40px;
+    font-size: 50px;
     min-width:600px;
     letter-spacing:4px;
     display: inline;
@@ -61,7 +59,7 @@ font-family: "Raleway", sans-serif;;
   position: relative;
 }
 .main-nav {
-  background: #fff;
+  background: #FBB03B;
   height: 80px;
   z-index: 150;
   margin-bottom: -80px;
@@ -74,11 +72,10 @@ header,.main-nav-scrolled {
 }
 
 .main {
-  background: none;
+  background: white;
   width:100% !important;
 
-  padding: 1px 1px 1px;
-  background-image: url("grey.png") !important;
+  /*padding: 1px 50px 50px;*/
 
 }
 .arrow{
@@ -96,7 +93,7 @@ header,.main-nav-scrolled {
 }
 
 .next_buttons{
-    font-family: Cabin Sketch !important;
+    font-family:Abril Fatface !important;
     font-size: 34px;
     float: right;
     margin-right: 15px;
@@ -121,14 +118,14 @@ header,.main-nav-scrolled {
 }
 
 .back_text{
-    font-family: Cabin Sketch !important;
+    font-family:Abril Fatface !important;
     font-size: 30px;
     float: right;
     cursor: pointer;
 }
 #area{
 
-/*text-align: center;*/
+
 }
 #content{
     position:relative;
@@ -137,29 +134,23 @@ header,.main-nav-scrolled {
 }
 
 .section_title{
-    font-family: Cabin Sketch;
-    margin: 1.5em 0 0;
-    /*background-color: #FA6D68;*/
-    text-align: center !important;
-    margin-top: 100px;
-     padding: 15px 32px;
-    /*color:white;*/
-    border: none;
-    text-decoration: none;
-    font-size: 55px;
+    font-family:Abril Fatface;
+    /*margin: 1.5em 0 0;*/
+    padding: 15px 32px;
+    font-size: 40px;
+    text-align: left !important;
+    margin-left: 40px;
 
 
 }
-.section_buttons{
-    text-align: center;
-}
+
 
  #country_label{
   position:absolute;
   bottom:30px;
   right:10px;
 
-  font-family: 'Raleway' !important;
+  font-family: 'Cabin' !important;
   font-size: 35px;
   text-align: right;
 
@@ -169,37 +160,52 @@ header,.main-nav-scrolled {
 .globe{
     /*position: absolute;*/
     text-align: center;
-    display: inline;
+
     position: relative;
     padding:0;
+    float:left;
+
 
     }
-
+.globe_space{
+    background-color: #C1C1C1;
+    display: inline-block;
+    margin-top: 100px;
+    width:100%;
+    /*background-image: url("grey.png") !important;*/
+}
+.space_text{
+    font-family:Cabin;
+    width:500px;
+    float:left;
+    margin-top: 100px;
+}
 .water {
-  fill: aliceblue;
+  fill: white;
   cursor:move;
 }
 
 .land {
-  fill: #789f12;
-  stroke: lightgrey;
+  /*fill: #789f12;*/
+  fill:lightgrey;
+  stroke: darkgrey;
   stroke-width: 1px;
 }
 
 .land:hover {
-  fill:#FFFF99;
+  fill:grey;
   stroke-width: 1.2px;
 }
 
 
 .country {
-  fill: #FFCC00;
+  fill: lightgrey;
   stroke: #FFF;
   stroke-width: 1px;
 }
 
 .country:hover {
-  fill:white;
+  fill:grey;
   stroke-width: 1.2px;
 }
 
@@ -217,6 +223,69 @@ header,.main-nav-scrolled {
   border-radius:10px;
 }
 
+.project_space{
+    background-color: #DDDDDD;
+    margin-top: 15px;
+    width:100%;
+    display: inline-block;
+    text-align:center;
+
+}
+.resume_space{
+    background-color: #FBB03B;
+    margin-top: 15px;
+    width:100%;
+    display: inline-block;
+    padding-bottom: 10px;
+
+}
+.contact_space{
+    /*box-shadow: 2 3px 0px rgba(0,0,0,.4);*/
+    background-color: #DDDDDD;
+    margin-top: 15px;
+    width:100%;
+    display: inline-block;
+    background-image: url("grey.png") !important;
+
+
+}
+.contact_i{
+    width:100%;
+    margin-left: 80px;
+
+}
+.myform{
+
+    font-family: Cabin;
+    font-size: 18px;
+    margin-left: 60%;
+}
+.picture{
+     border-radius: 50%;
+     width:250px;
+     margin-left: 15%;
+     float: left;
+     /*-webkit-filter: grayscale(10%);
+     filter: grayscale(10%);*/
+}
+
+.links a{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Cabin;
+    color:black;
+
+    margin-left: 30%;
+    /*border-bottom: 3px solid #000;*/
+}
+
+
+.links{
+
+    /*margin-left: 20%;*/
+
+}
+
 /*path {
   stroke: rgba(225,227,216,0.8);
   stroke-width: 2px;
@@ -232,77 +301,25 @@ circle {
   pointer-events: none;
 }
 
-.q0-9 { fill: #E8E8E8}
-.q1-9 { fill: #EDF3F3}
-.q2-9 { fill: #E0EAEA }
-.q3-9 { fill: #FFFFFF }
-.q4-9 { fill: #FFFF99 }
-.q5-9 { fill: #C8C8DA}
-.q6-9 { fill: #F8F8F8 }
-.q7-9 { fill: #FFCC00}
-.q8-9 { fill: #FFFF99}
 
 
-
-#panel {
+/*#panel {
 
 width: 1000px;
 margin: auto;
 z-index:2;
 
-}
+}*/
 
-title {
-color:blue;
-}
-
-title.text {
-color:blue;
-}
-
-
-
-/*rect{
-fill: #EDF3F3;
-}
-rect:hover
-
-  {
-    fill: #FFCC00 !important;
-    cursor:pointer;
-
-  }*/
-
-/*#rects{
-
-position:absolute;
-top:0;
-width:350px;
-left:-50px;
-padding-left:60px;
-padding-right:50px;
-padding-top: 90px;
-z-index:1;
-
-
-}
-
-*/
 
 text {
 cursor:pointer;
 }
 
-/*circle{
-position:absolute:
-float:right;
-padding-left:400px;
-padding-top: 40px;
-padding-right:10px;
-}*/
+
 
 #div1 {
-    font-family:Raleway;
+    font-family:Cabin;
     font-size:25px;
     color:orange;
     margin: 3px;
@@ -311,7 +328,7 @@ padding-right:10px;
   }
 
  #div2 {
-    font-family:Raleway;
+    font-family:Cabin;
     font-size:15px;
     color:steelblue;
     margin: 3px;
@@ -321,9 +338,7 @@ padding-right:10px;
 
 
 #showr{
-
     cursor:pointer;
-
 }
 
 #hidr{
@@ -347,15 +362,15 @@ ul.sonarmenu a{
     text-decoration: none;
     margin: 10px 20px;
     text-transform: uppercase;
-    font-family: 'Raleway', sans-serif; /* font style (uses Google fonts) */
+    font-family: 'Cabin', sans-serif; /* font style (uses Google fonts) */
     font-size: 16px; /* font size */
     letter-spacing: 2px; /* letter spacing */
-    border-bottom: 2px solid transparent; /* Bottom border style */
+    border-bottom: 3px solid #000; /* Bottom border style */
 }
 
 ul.sonarmenu a:hover, ul.sonarmenu a:focus{
     outline: none;
-    border-bottom: 2px solid #eee; /* Bottom border style on hover */
+    border-bottom: 4px solid #000; /* Bottom border style on hover */
 }
 
 ul.sonarmenu a::before, ul.sonarmenu a:after{ /* shared style for two circles */
@@ -447,7 +462,7 @@ ul.sonarmenu a:hover:before, ul.sonarmenu a:hover:after{
 
 }
 
-.ui-dialog {
+/*.ui-dialog {
     background: white !important;
     border: 1px solid black !important;
     border-radius: 10px !important;
@@ -457,7 +472,7 @@ ul.sonarmenu a:hover:before, ul.sonarmenu a:hover:after{
 .ui-dialog-titlebar {
     background: none !important;
     border: 0px solid black !important;
-    font: Raleway;
+    font: Cabin;
 
 }
 
@@ -465,33 +480,33 @@ ul.sonarmenu a:hover:before, ul.sonarmenu a:hover:after{
     font-size: 150% !important;
     color: #000 !important;
     background: #fff !important;
-    font-family: Raleway;
-}
+    font-family: Cabin;
+}*/
 
 
 @media screen and (max-width: 50%) {
     .globe,#globewater, {
-        display: none !important;
+
     }
 
 }
 
 @media screen and (max-width: 1000px) {
     .sonarmenu,  {
-        display: none !important;
+
     }
 
 }
 
 
 /* Set the fixed height of the footer here */
-footer#footer {
+/*footer#footer {
   height: 80px !important;
   background-color: #F6F6F5 !important;
   width:100%;
   z-index:100000000000;
   bottom:10px;
-  font-family:Raleway;
+  font-family:Cabin;
 }
 
 #footer2 {
@@ -502,8 +517,8 @@ footer#footer {
   bottom:0;
   left:0;
   /*position absolute;*/
-  font-family:Raleway;
-}
+  font-family:Cabin;
+}*/
 
 .icon img{ /* 2nd set of icons. Rotate them 60deg onmouseover and out */
 moz-transition: all 0.8s ease-in-out;
@@ -587,7 +602,7 @@ background-color:lightgrey;
 
 
 #explore{
-font-family:Raleway;
+font-family:Cabin;
 /*position:absolute;*/
 top:100px;
 right:21%
@@ -610,16 +625,15 @@ top:510px;
 left: 37px;
 width: 200px;
 visibility:hidden;
-font-family: Raleway;
+font-family: Cabin;
 font-weight: bold;
 font-size: small;
 }
 
 .buttons{
-    width:600px;
-    position:relative;
-    float: left:
-    display:inline;
+    width:960px;
+    padding:10px;
+    margin:0 auto;
 }
 
 .view {
@@ -663,7 +677,7 @@ font-size: small;
     margin: 20px 0 0 0
 }
 .view p {
-    font-family: Raleway, sans-serif;
+    font-family: Cabin, sans-serif;
     font-style: normal;;
     font-size: 13px;
     position: relative;
@@ -799,7 +813,7 @@ font-size: small;
 .summary{
     width:700px;
     margin:auto;
-    font-family: 'Coming Soon', 'Raleway';
+    font-family: 'Coming Soon', 'Cabin';
     position:relative;
 }
 
@@ -810,7 +824,7 @@ font-size: small;
 }*/
 .header{
     font-weight: bold;
-    font-family: Raleway;
+    font-family: Cabin;
 
 }
 
@@ -848,7 +862,7 @@ font-size: small;
     text-decoration:none !important;
     font-size:25px;
     color: white !important;
-    font-family: Raleway;
+    font-family: Cabin;
     text-align: center;
 }
 .drawing_link:hover{
@@ -872,9 +886,9 @@ a:active{
     margin-top: 100px;
 }
 .area_resume{
-    margin-left: 40px !important;
-    margin-right:40px !important;
-    font-family: Raleway!important;
+    /*margin-left: 40px !important;
+    margin-right:40px !important;*/
+    font-family: Cabin;
 }
 #school3, #school4{
     font-size:12px;

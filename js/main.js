@@ -93,7 +93,8 @@ $("#georgia_link").click(function(){
 	  .clipAngle(90);
 
 	  var path1 = d3.geo.path()
-	  .projection(projection);
+	  .projection(projection)
+      .pointRadius(function() { return 11; });;
 
 
 	  var title = d3.select("#country_label");
@@ -271,7 +272,7 @@ function ready(error, world,countryData, countryAll) {
 
             .attr("d", path1)
 
-            .style("fill", "yellow")
+            .style("fill", "orange")
             .style("opacity", 0.75)
             .call(d3.behavior.drag()
             .origin(function() { var r = projection.rotate(); return {x: r[0] / sens, y: -r[1] / sens}; })
@@ -298,7 +299,7 @@ function ready(error, world,countryData, countryAll) {
            })
            .on("mouseout", function(d){
 
-               d3.select(this).style("fill","yellow");
+               d3.select(this).style("fill","orange");
                countryTooltip.style("opacity", 0)
                .style("display", "none");
 
