@@ -172,7 +172,7 @@ header,.main-nav-scrolled {
     display: inline-block;
     margin-top: 100px;
     width:100%;
-    /*background-image: url("grey.png") !important;*/
+    background-image: url("/images/grey_paper.png") !important;
 }
 .space_text{
     font-family:Cabin;
@@ -223,12 +223,18 @@ header,.main-nav-scrolled {
   border-radius:10px;
 }
 
+.font_s{
+    font-family: Abril fatface;
+    font-size: 18px;
+}
+
 .project_space{
-    background-color: #DDDDDD;
+    background-color: #C1C1C1;
     margin-top: 15px;
     width:100%;
     display: inline-block;
     text-align:center;
+    background-image: url("/images/textured_paper.png") !important;
 
 }
 .resume_space{
@@ -245,7 +251,8 @@ header,.main-nav-scrolled {
     margin-top: 15px;
     width:100%;
     display: inline-block;
-    background-image: url("grey.png") !important;
+    background-image: url("/images/grey_paper.png") !important;
+
 
 
 }
