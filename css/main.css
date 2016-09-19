@@ -139,7 +139,7 @@ header,.main-nav-scrolled {
     padding: 15px 32px;
     font-size: 40px;
     text-align: left !important;
-    margin-left: 40px;
+    margin-left: 140px;
 
 
 }
@@ -147,8 +147,9 @@ header,.main-nav-scrolled {
 
  #country_label{
   position:absolute;
-  bottom:30px;
-  right:10px;
+  bottom:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
 
   font-family: 'Cabin' !important;
   font-size: 35px;
@@ -278,18 +279,25 @@ header,.main-nav-scrolled {
 
 .links a{
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     font-family: Cabin;
     color:black;
+    border-style: solid;
+    border-width: 2px;
+    margin-left: 20%;
+    padding: 5px;
 
-    margin-left: 30%;
     /*border-bottom: 3px solid #000;*/
 }
 
-
 .links{
+    margin-top: 35px;
+}
 
-    /*margin-left: 20%;*/
+.links a:hover{
+    text-decoration: none;
+    color:white;
+
 
 }
 
@@ -372,7 +380,12 @@ ul.sonarmenu a{
     font-family: 'Cabin', sans-serif; /* font style (uses Google fonts) */
     font-size: 16px; /* font size */
     letter-spacing: 2px; /* letter spacing */
-    border-bottom: 3px solid #000; /* Bottom border style */
+    /* Bottom border style */
+}
+.underline{
+    letter-spacing: 2px;
+    border-bottom: 4px solid #000;
+
 }
 
 ul.sonarmenu a:hover, ul.sonarmenu a:focus{
@@ -608,12 +621,15 @@ background-color:lightgrey;
 }
 
 
-#explore{
+#stop, #start{
 font-family:Cabin;
-/*position:absolute;*/
-top:100px;
-right:21%
+cursor: pointer;
 
+
+}
+
+#stop:hover, #start:hover{
+    color:orange;
 }
 
 #countries152, #countries51, #countries268, #countries392, #countries840 {
@@ -749,6 +765,10 @@ font-size: small;
 .view-first:hover a.info {
     transition-delay: 0.2s;
 }
+.view:hover{
+    border-color: #ffcb00;
+}
+
 #chile_scroll,#chile_scrollB, #armenia_scroll, #georgia_scroll, #japan_scroll, #globe_scroll {
     display: none;
     position: relative;
@@ -773,11 +793,11 @@ font-size: small;
     display: inline-block;
 
 }
-.abouttext{
-     /*float: left;
+.about_text{
     display: inline-block;
-    margin-right: 8px;*/
-
+}
+.global{
+    margin-left: 0px;
 }
 .stopspin{
     position: absolute;
@@ -888,6 +908,7 @@ a:active{
 /*Resume Style*/
 #iconheader{
     float:left;
+    display: none;
 }
 .objective{
     margin-top: 100px;
@@ -896,6 +917,10 @@ a:active{
     /*margin-left: 40px !important;
     margin-right:40px !important;*/
     font-family: Cabin;
+}
+
+.resume_t{
+    float:left;
 }
 #school3, #school4{
     font-size:12px;

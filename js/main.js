@@ -18,43 +18,47 @@ $(document).on('click','.searchbychar', function(event) {
         scrollTop: $(target).offset().top
     }, 1500);
 });
-$(document).on('click','.searchbychar_fast', function(event) {
-    event.preventDefault();
-    var target = "#" + this.getAttribute('data-target');
-    $('html, body').animate({
-        scrollTop: $(target).offset().top
-    }, 1500);
-});
 
-$(".next").click(function(){
-    // $("#area").load("http://loosine.com #area > *");
-    var src = 'us_page/js/usmain.js';
-    window.open("http://loosine.com/us_projects","_self",true);
 
-    // $.getScript(src, function () {
-    //     console.log('script is loaded');
-    // });
-    //
-    // return false;
-    });
+
 
 $("#resume").click(function(){
      $("#area").load("resume.html #area > *");
 });
-$("#japan_link").click(function(){
-    //window.open("http://www.loosine.com/international/japan.html");
-    setTimeout('window.open(\'http://www.loosine.com/international/japan.html\'), 1500');
 
-});
+$(window).scroll(function() {
+    und = "underline";
+    if ($(this).scrollTop()>1800) {
+        $('.resume_n').removeClass(und);
+        $('.contact_n').addClass(und);
+    }
+    else if ($(this).scrollTop()>1500) {
+        $('.project_n').removeClass(und);
+        $('.contact_n').removeClass(und);
+        $('.resume_n').addClass(und);
+    }
+    else if ($(this).scrollTop()>500)
+     {
+          $('.about_n').removeClass(und);
+          $('.project_n').addClass(und);
+          $('.resume_n').removeClass(und);
+     }
+     else if ($(this).scrollTop()>300){
 
-$("#inf_link").click(function(){
-    setTimeout('window.open(\'http://loosine.com/informal_settlements\'),');
+          $('.about_n').addClass(und);
+          $('.project_n').removeClass(und);
+           $('.resume_n').removeClass(und);
+     }
+     else if ($(this).scrollTop()>70){
+         $('#iconheader').show();
+     }
+    else
+     {
+      $('#iconheader').hide();
+      $('.about_n').removeClass(und);
 
-});
-$("#georgia_link").click(function(){
-    setTimeout('window.open(\'http://www.loosine.com/blog/?page_id=36\', 1500)');
-
-});
+     }
+ });
 
  	var tooltip10 = d3.select("body")
 	.append("div")
@@ -230,23 +234,24 @@ function ready(error, world,countryData, countryAll) {
     .on("mouseout", function(d) {
       countryTooltip.style("opacity", 0)
       .style("display", "none");
+
     })
     .on("click", function(d){
         console.log(d);
         if(d.name=="Georgia") {
-            scroll_country(georgia_scroll);
+            scroll_country("georgia");
         }
         else if(d.name=="Armenia"){
-            scroll_country(armenia_scroll);
+            scroll_country("armenia");
         }
         else if(d.name=="Chile"){
-            scroll_country(chile_scroll);
+            scroll_country("chile");
         }
         else if(d.name=="Japan"){
-            scroll_country(japan_scroll);
+            scroll_country("japan");
         }
         else if(d.name=="United States"){
-            window.open("http://loosine.com/us_projects");
+            scroll_country("bis");
         }
 
     })
@@ -304,32 +309,67 @@ function ready(error, world,countryData, countryAll) {
                .style("display", "none");
 
            })
+           .on("click", function(d){
+               console.log(d);
+               if(d.name=="Boston") {
+                   scroll_country("bis");
+               }
+               else if(d.name=="Los Angeles"){
+                   scroll_country("luskin");
+               }
+               else if(d.name=="New York"){
+                   scroll_country("ny");
+               }
+               else if(d.name=="Chicago"){
+                   scroll_country("chicago");
+               }
+               else if(d.name=="Cupertino"){
+                   scroll_country("ar");
+               }
+               else if(d.name=="Armenia"){
+                   scroll_country("armenia");
+               }
+               else if(d.name=="Chile"){
+                   scroll_country("chile");
+               }
+               else if(d.name=="Japan"){
+                   scroll_country("japan");
+               }
+               else if(d.name=="Georgia"){
+                   scroll_country("georgia");
+               }
+
+           })
+
         });
+     start_transition();
+
+    function start_transition() {
+
+            d3.transition()
+                  .duration(1850)
+                  .each("start", function() {
+              title.text(countries[i = (i + 1) % n].name);
+                  console.log(n);
+
+                  })
+                  .tween("rotate", function() {
+                    var p = d3.geo.centroid(countries[i]),
+                        r = d3.interpolate(projection.rotate(), [-p[0], -p[1]]);
+                        return function(t) {
+                          projection.rotate(r(t));
+                          svgContainer2.selectAll("path.country").attr("d", path1);
+                          svgContainer2.selectAll("path.land").attr("d", path1);
+                          svgContainer2.selectAll("path.point").attr("d", path1);
+                        };
+                  })
 
 
-  (function transition() {
+                .transition()
+                  .each("end", start_transition);
+            }
 
-      d3.transition()
-            .duration(1850)
-            .each("start", function() {
-        title.text(countries[i = (i + 1) % n].name);
-            console.log(n);
 
-            })
-            .tween("rotate", function() {
-              var p = d3.geo.centroid(countries[i]),
-                  r = d3.interpolate(projection.rotate(), [-p[0], -p[1]]);
-                  return function(t) {
-                    projection.rotate(r(t));
-        			svgContainer2.selectAll("path.country").attr("d", path1);
-        			svgContainer2.selectAll("path.land").attr("d", path1);
-                    svgContainer2.selectAll("path.point").attr("d", path1);
-                  };
-            })
-
-          .transition()
-            .each("end", transition);
-      })();
 
 
 
@@ -354,8 +394,8 @@ function ready(error, world,countryData, countryAll) {
               var p = d3.geo.centroid(countries[i]),
                   r = d3.interpolate(projection.rotate(), [-p[0], -p[1]])
                   title.text(countries[i].name);
-                  console.log(countries[i].name);
-                  console.log(countries.length);
+                //   console.log(countries[i].name);
+                //   console.log(countries.length);
 
               return function(t) {
                 projection.rotate(r(t));
@@ -368,7 +408,18 @@ function ready(error, world,countryData, countryAll) {
           .each("end", stop_transition);
 
         }
+         function stop1_transition(){
+             d3.transition()
+             .duration(0);
+         }
 
+         d3.select("#stop").on("click", function(d,i){
+             stop1_transition();
+             title.text("");
+         });
+         d3.select("#start").on("click", function(d,i){
+             start_transition();
+         });
 
 
 
@@ -397,10 +448,16 @@ function ready(error, world,countryData, countryAll) {
 
 
     function scroll_country(scroll){
-        $(scroll).show();
+        $("."+ scroll).css("border-color", "#ffcb00");
         $('html, body').animate({
-               scrollTop: $(scroll).offset().top
+               scrollTop: $("." + scroll).offset().top - 100
            }, 1000);
+         $(".buttons").mouseout(function(){
+             $("."+ scroll).css("border-color", "#fff").delay(10000);
+         });
+         $("."+ scroll).mouseover(function(){
+             $("."+ scroll).css("border-color", "#ffcb00");
+         });
     }
 //END GLOBE//
 

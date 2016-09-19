@@ -28,18 +28,19 @@
 
         <header>
             <div id="box">
-                <img id="iconheader"src="images/logo_t.png" style="">
+
     			<h2 id ="title"> LOOSINE VARTANI</h2>
             </div>
         </header>
 
         <nav class= "main-nav">
+                <img id="iconheader"src="images/logo3.png" style="">
 				<ul class="sonarmenu">
     				<li><a href="http://loosine.com/international_projects">Home</a></li>
-    				<li id="opener" class="searchbychar_fast" data-target="about_scroll"><a>About Me</a></li>
-    				<li id="arcopener" ><a>Architecture</a></li>
-    				<li id="gisopener"><a>GIS</a></li>
-    				<li id="resume"><a>Resume</a></li>
+    				<li id="about" class="searchbychar" data-target="start"><a class="about_n">About Me</a></li>
+    				<li id="projects" class="searchbychar" data-target="projects"><a class="project_n">Projects</a></li>
+    				<li id="resume" class="searchbychar"><a class="resume_n">Resume</a></li>
+    				<li id="contact"class="searchbychar"><a class="contact_n">Contact</a></li>
 				</ul>
         </nav>
 
@@ -49,62 +50,63 @@
                         <div class="globe">
                             <h1 id= "country_label"></h1>
                             <!-- <p class ="stopspin">Explore Globe</p> -->
-                            <!-- <p id="explore">[DRAG TO EXPLORE]</p> -->
+                            <p id="stop">STOP</p>
+                            <p id="start">START</p>
                         </div>
                         <div class="space_text">
-                            <div class="section_title">GLOBAL WORK</div>
-                            <p>
-                                <p class="font_s">Hi, my name</p> is Loosine. I am fascinated by cartographic representations of data and digital story-telling. I work to articulate complex subject matter through visualization methods –using statistical programming, data analysis, GIS mapping, and web design to communicate important data patterns through graphical representations. Particularly I am motivated by research relating to urban discussions for equitable community development, social justice, and sustainability.
+                            <div class="section_title global">GLOBAL WORK</div>
+                            <p class="about_text">
+                                <span class="font_s">I make visualizations around the world.</span> My name is Loosine. I am fascinated by cartographic representations of data and digital story-telling. I work to articulate complex subject matter through visualization methods –using statistical programming, data analysis, GIS mapping, and web design to communicate important data patterns through graphical representations. Particularly I am motivated by research relating to urban discussions for equitable community development, social justice, and sustainability.
                                  When I am not making charts or maps, I like to surf, hike, and watch tv game shows. Also, I read mystery novels and practice my backstroke, reliving high school swim relay races, whenever I get the chance.
                             </p>
                         </div>
                     </div>
 
-                    <div class="project_space">
+                    <div id="projects"class="project_space">
                         <div class="section_title">PROJECTS</div>
                         <div class= "buttons">
-                            <div class="view view-first bis searchbychar" data-target="bis">
+                            <div class="view view-first bis">
                                  <img src="images/city.png" />
                                  <div class="mask">
                                      <h2>Building Intelligence</h2>
                                      <p>Boston, MA</p>
-                                         <!-- <a href="#" class="info">Read More</a> -->
+                                         <a href="../html/bis.html" target="_blank"class="info">Read More</a>
                                  </div>
 
                             </div>
-                            <div class="view view-first water searchbychar" data-target="luskin">
+                            <div class="view view-first luskin" >
                                  <img src="images/luskin2.jpg"/>
                                  <div class="mask">
                                      <h2>Water Atlas</h2>
                                      <p>Los Angeles, CA</p>
-                                         <!-- <a href="#" class="info">Read More</a> -->
+                                         <a href="../html/luskin.html" target="_blank"class="info">Read More</a>
                                  </div>
                             </div>
 
-                            <div class="view view-first ny searchbychar" data-target="ny_upk">
+                            <div class="view view-first ny">
                                  <img src="images/newyork.png" />
                                  <div class="mask">
                                      <h2>Universal Pre-K</h2>
                                      <p>New York, NY</p>
-                                         <!-- <a href="#" class="info">Read More</a> -->
+                                         <a href="../html/nyc.html" target="_blank"class="info">Read More</a>
                                  </div>
                             </div>
 
                             <div class="view view-first chicago">
                                  <img src="images/chicago.png"/>
                                  <div class="mask">
-                                     <h2>Dashboard</h2>
+                                     <h2>Violations</h2>
                                      <p>Chicago, IL</p>
-                                         <a href="http://loosine.com/dashboards/violations_dashboard/" class="info"target="_blank" >Link</a>
+                                         <a href="../html/chicago.html" class="info"target="_blank" >Read More</a>
                                  </div>
                             </div>
 
                             <div class="view view-first bcrime">
-                                 <img src="images/crime2.png" />
+                                 <img src="images/crime.png" />
                                  <div class="mask">
-                                     <h2>D3 Dashboards</h2>
+                                     <h2>Crime Dashboard</h2>
                                      <p>Boston, MA</p>
-                                         <a href="http://loosine.com/dashboards/crime_dashboard/" target="_blank" class="info">Link</a>
+                                         <a href="../html/crime.html" target="_blank" class="info">Read More</a>
                                  </div>
                             </div>
 
@@ -113,19 +115,9 @@
                                  <div class="mask">
                                      <h2>Ancestry</h2>
                                      <p>By Congressional Districts</p>
-                                         <a href="http://loosine.com/ancestry/tabs.html" target="_blank" class="info">Link</a>
+                                         <a href="../html/ancestry.html" target="_blank" class="info">Read More</a>
                                  </div>
 
-                            </div>
-
-                            <div class="view view-first chile1">
-                                 <img src="images/chile1.png" />
-                                 <div class="mask">
-                                     <h2>University Population</h2>
-                                     <p>Chile <br>
-                                     Awarded Faucett Fellowship</p>
-                                         <a href="#" class="info searchbychar" data-target="chile_scrollB">Read More</a>
-                                 </div>
                             </div>
 
                             <div class="view view-first chile">
@@ -134,7 +126,16 @@
                                      <h2>Migration</h2>
                                      <p>Chile <br>
                                     Awarded Faucett Fellowship</p>
-                                         <a href="#" class="info searchbychar" data-target="chile_scroll">Read More</a>
+                                         <a href="../html/chile1.html" target="_blank" class="info">Read More</a>
+                                 </div>
+                            </div>
+                            <div class="view view-first chile1">
+                                 <img src="images/chile1.png" />
+                                 <div class="mask">
+                                     <h2>University Population</h2>
+                                     <p>Chile <br>
+                                     Awarded Faucett Fellowship</p>
+                                         <a href="../html/chile2.html" class="info"target="_blank" >Read More</a>
                                  </div>
                             </div>
 
@@ -143,7 +144,7 @@
                                  <div class="mask">
                                      <h2>Settlement Mapper</h2>
                                      <p>Global Locations</p>
-                                         <a href="#" class="info searchbychar" data-target="globe_scroll">Read More</a>
+                                         <a href="../html/infsettlements.html" target="_blank" class="info">Read More</a>
                                  </div>
                             </div>
                             <div class="view view-first japan">
@@ -153,7 +154,7 @@
                                      <p class="small_text">Japan<br>
                                          Awarded Teraski Foundation Funding
                                      </p>
-                                         <a href="#" class="info searchbychar"  data-target="japan_scroll">Read More</a>
+                                         <a href="../html/japan.html" target="_blank" class="info" >Read More</a>
                                  </div>
                             </div>
 
@@ -164,7 +165,7 @@
                                      <p class="small_text">Armenia <br>
                                         Awarded William E. Doctor Education Fund
                                      </p>
-                                         <a href="#" class="info searchbychar" data-target="armenia_scroll">Read More</a>
+                                         <a href="../html/armenia.html" target="_blank" class="info">Read More</a>
                                  </div>
                             </div>
                             <div class="view view-first georgia">
@@ -174,13 +175,43 @@
                                      <p class="small_text">Tbilisi, Georgia <br>
                                          Awarded Luskin Research Grant
                                      </p>
-                                         <a href="#" class="info searchbychar" data-target="georgia_scroll">Read More</a>
+                                         <a href="../html/georgia.html" target="_blank" class="info">Read More</a>
+                                 </div>
+                            </div>
+                            <div class="view view-first arch">
+                                 <img src="images/arch.png" />
+                                 <div class="mask">
+                                     <h2>Architecture Portfolio</h2>
+                                     <p class="small_text">Los Angeles,CA <br>
+                                         Awarded CityLAB Research Grant
+                                     </p>
+                                         <a href="../html/architecture.html" target="_blank"class="info">Read More</a>
+                                 </div>
+                            </div>
+                            <div class="view view-first gis">
+                                 <img src="images/gis1.png" />
+                                 <div class="mask">
+                                     <h2>PRINT GIS</h2>
+                                     <p class="small_text">Los Angeles,CA <br>
+
+                                     </p>
+                                          <a href="../html/gis.html" target="_blank"class="info">Read More</a>
+                                 </div>
+                            </div>
+                            <div class="view view-first ar">
+                                 <img src="images/ar2.png" />
+                                 <div class="mask">
+                                     <h2>Art Ranch</h2>
+                                     <p class="small_text">CA Hot Springs, CA <br>
+
+                                     </p>
+                                          <a href="../html/artranch.html" target="_blank"class="info">Read More</a>
                                  </div>
                             </div>
                         </div>
                     </div>
                     <div class="resume_space">
-                        <div class="section_title">RESUME</div>
+                        <div class="section_title resume_t">RESUME</div>
                         <div class="links">
                             <a href="">VIEW</a>
                             <a href="">PDF</a>
