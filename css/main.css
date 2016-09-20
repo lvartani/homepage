@@ -3,6 +3,18 @@
        display: inline-block;
        text-align: center;
   }
+  .globe{
+      float:none !important;
+
+
+  }
+  .space_text{
+      float: none !important;
+      margin: 0 auto !important;
+
+
+
+  }
 }
 
 
@@ -67,13 +79,12 @@ font-family: "Abril Fatface", sans-serif;;
 }
 header,.main-nav-scrolled {
   position: fixed;
-  width: 100%;
+  width: 100% !important;
   top: 0;
 }
 
 .main {
   background: white;
-  width:100% !important;
 
   /*padding: 1px 50px 50px;*/
 
@@ -179,7 +190,8 @@ header,.main-nav-scrolled {
     font-family:Cabin;
     width:500px;
     float:left;
-    margin-top: 100px;
+    margin-top: 10%;
+    margin-left: 10%;
 }
 .water {
   fill: white;
@@ -266,7 +278,8 @@ header,.main-nav-scrolled {
 
     font-family: Cabin;
     font-size: 18px;
-    margin-left: 60%;
+    margin-left: 20%;
+    float:left;
 }
 .picture{
      border-radius: 50%;
@@ -364,6 +377,7 @@ cursor:pointer;
 ul.sonarmenu{ /* Inspired by http://tympanus.net/codrops/2013/08/06/creative-link-effects */
     list-style: none;
     text-align: center;
+    margin-right: 40px;
 }
 
 ul.sonarmenu li{
@@ -620,12 +634,38 @@ background-color:lightgrey;
     z-index: 1040;
 }
 
+#expore_b{
+    margin-top: 10px;
+    position: absolute;
+    bottom: -35px !important;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-family: Abril Fatface;
+    font-size: 16px;
+}
 
 #stop, #start{
-font-family:Cabin;
+/*font-family:Cabin;*/
 cursor: pointer;
+padding: 3px;
+border-style: solid;
+border-width: 1px;
+background-color: white;
+border-radius: 2px;
 
-
+}
+.orange_circle{
+    background-color: orange;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    float: left;
+    margin-left: 12px;
+}
+.click_c{
+    display: inline-block;
+    float: left;
 }
 
 #stop:hover, #start:hover{
@@ -767,6 +807,10 @@ font-size: small;
 }
 .view:hover{
     border-color: #ffcb00;
+}
+.show{
+    opacity:1 !important;
+    transform: translateY(0px) !important;
 }
 
 #chile_scroll,#chile_scrollB, #armenia_scroll, #georgia_scroll, #japan_scroll, #globe_scroll {

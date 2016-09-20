@@ -28,7 +28,6 @@
 
         <header>
             <div id="box">
-
     			<h2 id ="title"> LOOSINE VARTANI</h2>
             </div>
         </header>
@@ -36,11 +35,11 @@
         <nav class= "main-nav">
                 <img id="iconheader"src="images/logo3.png" style="">
 				<ul class="sonarmenu">
-    				<li><a href="http://loosine.com/international_projects">Home</a></li>
-    				<li id="about" class="searchbychar" data-target="start"><a class="about_n">About Me</a></li>
-    				<li id="projects" class="searchbychar" data-target="projects"><a class="project_n">Projects</a></li>
-    				<li id="resume" class="searchbychar"><a class="resume_n">Resume</a></li>
-    				<li id="contact"class="searchbychar"><a class="contact_n">Contact</a></li>
+    				<!-- <li><a href="http://loosine.com/international_projects">Home</a></li> -->
+    				<li id="about" class="searchbychar_fast" data-target="global"><a class="about_n">About Me</a></li>
+    				<li id="projects" class="searchbychar_fast" data-target="buttons"><a class="project_n">Projects</a></li>
+    				<li id="resume" class="searchbychar_fast" data-target="resume_space"><a class="resume_n">Resume</a></li>
+    				<li id="contact"class="searchbychar_fast" data-target="contact_space"><a class="contact_n">Contact</a></li>
 				</ul>
         </nav>
 
@@ -48,16 +47,22 @@
 
                     <div class="globe_space">
                         <div class="globe">
+                            <div id="expore_b">
+                                <p>Navigate projects with globe</p>
+                                <p class="click_c">Click<div class="orange_circle"></div>to view projects</p>
+                                <p> <span id="start">START</span>
+                                    <span id="stop">STOP</span>
+                                </p>
+                            </div>
                             <h1 id= "country_label"></h1>
                             <!-- <p class ="stopspin">Explore Globe</p> -->
-                            <p id="stop">STOP</p>
-                            <p id="start">START</p>
+
                         </div>
                         <div class="space_text">
                             <div class="section_title global">GLOBAL WORK</div>
                             <p class="about_text">
-                                <span class="font_s">I make visualizations around the world.</span> My name is Loosine. I am fascinated by cartographic representations of data and digital story-telling. I work to articulate complex subject matter through visualization methods –using statistical programming, data analysis, GIS mapping, and web design to communicate important data patterns through graphical representations. Particularly I am motivated by research relating to urban discussions for equitable community development, social justice, and sustainability.
-                                 When I am not making charts or maps, I like to surf, hike, and watch tv game shows. Also, I read mystery novels and practice my backstroke, reliving high school swim relay races, whenever I get the chance.
+                                <span class="font_s"> I turn data into visualizations.</span> My name is Loosine and I am a Gis Specialist, Data Visualization Expert, and Web Developer.  I am fascinated by the power of data and digital story-telling. I work to articulate complex subject matter through visualization methods –using statistical programming, data analysis, GIS mapping, and web design to communicate important patterns. When data is made more understandable and information more transparent, there is more possibility for change. By creating dialogue with data, we are able to discover important fascets that inform us of how we can improve our day-to-day lives. Data has the power to uncover injustices, health hazards, track social changes, and inform how we can change public policy.
+
                             </p>
                         </div>
                     </div>
@@ -221,13 +226,13 @@
                         <div class="section_title">CONTACT</div>
                         <div class="contact_i">
                             <img class="picture"src="images/lucy.jpg">
-                            <form class="myform" action="mailto:mail@loosine.com" method="post" enctype="text/plain">
+                            <form class="myform" action="contact-form-handler.php" name="contact_form" method="post" >
                                 Name:<br>
                                 <input type="text" name="name"><br>
                                 E-mail:<br>
-                                <input type="text" name="mail"><br>
+                                <input type="text" name="email"><br>
                                 Message:<br>
-                                <textarea type="text" name="comment" size="50"></textarea><br><br>
+                                <textarea name="message" size="50"></textarea><br><br>
                                 <input type="submit" value="Send">
                                 <input type="reset" value="Reset">
                             </form>
@@ -264,7 +269,7 @@
 
     <!-- Install Restive.JS -->
     <!-- <script type="text/javascript" src="js/restive.min.js"></script> -->
-
+    <script  type="text/javascript" src="js/gen_validatorv4.js"></script>
     <script id= "js_switch"type="text/javascript" src="js/main.js"></script>
 
 

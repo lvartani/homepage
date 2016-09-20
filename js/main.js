@@ -10,13 +10,27 @@ $(window).scroll(function() {
   }
 });
 
+var frmvalidator  = new Validator("contact_form");
+frmvalidator.addValidation("name","req","Please provide your name");
+frmvalidator.addValidation("email","req","Please provide your email");
+frmvalidator.addValidation("email","email",
+  "Please enter a valid email address");
+
 $(document).on('click','.searchbychar', function(event) {
     event.preventDefault();
     var target = "#" + this.getAttribute('data-target');
     $(target).show();
-    $('html, body').delay(500).animate({
+    $('html, body').animate({
         scrollTop: $(target).offset().top
     }, 1500);
+});
+
+$(document).on('click','.searchbychar_fast', function(event) {
+    event.preventDefault();
+    var target = "." + this.getAttribute('data-target');
+    $('html, body').animate({
+        scrollTop: $(target).offset().top -150
+    }, 1000);
 });
 
 
@@ -28,7 +42,7 @@ $("#resume").click(function(){
 
 $(window).scroll(function() {
     und = "underline";
-    if ($(this).scrollTop()>1800) {
+    if ($(this).scrollTop()>1850) {
         $('.resume_n').removeClass(und);
         $('.contact_n').addClass(und);
     }
@@ -43,7 +57,7 @@ $(window).scroll(function() {
           $('.project_n').addClass(und);
           $('.resume_n').removeClass(und);
      }
-     else if ($(this).scrollTop()>300){
+     else if ($(this).scrollTop()>350){
 
           $('.about_n').addClass(und);
           $('.project_n').removeClass(und);
@@ -84,7 +98,7 @@ $(window).scroll(function() {
     //GLOBE START//
 
 	  var width = 530,
-	  height = 600,
+	  height = 680,
 	  sens = 0.25;
 
 
@@ -371,18 +385,6 @@ function ready(error, world,countryData, countryAll) {
 
 
 
-
-
-        d3.select(".infset").on("click", function(d){
-            d3.selectAll(".land").style("stroke", "white").style("stroke-width","2");
-        });
-        d3.select(".infset").on("mouseover", function(d){
-            d3.selectAll(".land").style("stroke", "white").style("stroke-width","2");
-        });
-        d3.select(".infset").on("mouseout", function(d){
-            d3.selectAll(".land").style("stroke", "lightgrey").style("stroke-width","1");
-        });
-
         function stop_transition() {
             console.log("stop");
         }
@@ -449,11 +451,14 @@ function ready(error, world,countryData, countryAll) {
 
     function scroll_country(scroll){
         $("."+ scroll).css("border-color", "#ffcb00");
+        // $("." +scroll + " h2").css("opacity", "1");
+        // $("." +scroll + " h2").css("transform", "translateY(0px)");
+        // $("." +scroll + " .mask").css("opacity", "0.5");
         $('html, body').animate({
                scrollTop: $("." + scroll).offset().top - 100
            }, 1000);
-         $(".buttons").mouseout(function(){
-             $("."+ scroll).css("border-color", "#fff").delay(10000);
+         $("."+ scroll).mouseout(function(){
+             $("."+ scroll).delay(1500).css("border-color", "#fff");
          });
          $("."+ scroll).mouseover(function(){
              $("."+ scroll).css("border-color", "#ffcb00");
