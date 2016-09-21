@@ -176,6 +176,7 @@ header,.main-nav-scrolled {
     position: relative;
     padding:0;
     float:left;
+    margin-left: 5%;
 
 
     }
@@ -264,8 +265,10 @@ header,.main-nav-scrolled {
     margin-top: 15px;
     width:100%;
     display: inline-block;
+    float:left;
+    position: relative;
     background-image: url("/images/grey_paper.png") !important;
-
+    padding-bottom: 100px;
 
 
 }
@@ -274,16 +277,28 @@ header,.main-nav-scrolled {
     margin-left: 80px;
 
 }
+
+.more_info{
+    font-family: Cabin;
+
+    margin-left: 10%;
+    float: left;
+
+}
 .myform{
 
     font-family: Cabin;
     font-size: 18px;
     margin-left: 20%;
     float:left;
+
+}
+.myform h2{
+    font-family: Abril Fatface;
 }
 .picture{
      border-radius: 50%;
-     width:250px;
+     width:300px;
      margin-left: 15%;
      float: left;
      /*-webkit-filter: grayscale(10%);
@@ -293,12 +308,13 @@ header,.main-nav-scrolled {
 .links a{
     text-decoration: none;
     font-size: 18px;
-    font-family: Cabin;
+    font-family: Abril Fatface;
     color:black;
     border-style: solid;
     border-width: 2px;
     margin-left: 20%;
     padding: 5px;
+    border-radius: 5%;
 
     /*border-bottom: 3px solid #000;*/
 }
