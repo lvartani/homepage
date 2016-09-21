@@ -308,7 +308,7 @@ header,.main-nav-scrolled {
 
 .links a{
     text-decoration: none;
-    font-size: 18px;
+    /*font-size: 18px;*/
     font-family: Abril Fatface;
     color:black;
     border-style: solid;
