@@ -281,8 +281,9 @@ header,.main-nav-scrolled {
 .more_info{
     font-family: Cabin;
 
-    margin-left: 10%;
+    margin-left: 24%;
     float: left;
+    width: 300px;
 
 }
 .myform{
@@ -855,6 +856,7 @@ font-size: small;
 }
 .about_text{
     display: inline-block;
+    width: 500px;
 }
 .global{
     margin-left: 0px;
