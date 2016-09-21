@@ -248,7 +248,7 @@ header,.main-nav-scrolled {
     width:100%;
     display: inline-block;
     text-align:center;
-    background-image: url("/images/textured_paper.png") !important;
+    background-image: url("../images/textured_paper.png") !important;
 
 }
 .resume_space{
@@ -267,7 +267,7 @@ header,.main-nav-scrolled {
     display: inline-block;
     float:left;
     position: relative;
-    background-image: url("/images/grey_paper.png") !important;
+    background-image: url("../images/grey_paper.png") !important;
     padding-bottom: 100px;
 
 
