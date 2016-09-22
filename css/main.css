@@ -981,7 +981,7 @@ a:active{
     display: none;
 }
 .objective{
-    margin-top: 100px;
+    /*margin-top: 100px;*/
 }
 .area_resume{
     /*margin-left: 40px !important;
@@ -1007,10 +1007,6 @@ td{
     cursor: pointer;
 }
 
-.title{
-    color:darkorange !important;
-    font-weight: bold;
-    font-size: 18px;
-}
+
 
 /*Resume Style*/
