@@ -50,6 +50,7 @@ $(window).scroll(function() {
         $('.project_n').removeClass(und);
         $('.contact_n').removeClass(und);
         $('.resume_n').addClass(und);
+        $('#title').css("display", "none");
     }
     else if ($(this).scrollTop()>500)
      {
@@ -57,7 +58,7 @@ $(window).scroll(function() {
           $('.project_n').addClass(und);
           $('.resume_n').removeClass(und);
      }
-     else if ($(this).scrollTop()>350){
+     else if ($(this).scrollTop()>250){
 
           $('.about_n').addClass(und);
           $('.project_n').removeClass(und);
@@ -70,6 +71,7 @@ $(window).scroll(function() {
      {
       $('#iconheader').hide();
       $('.about_n').removeClass(und);
+      $('#title').css("display", "inline");
 
      }
  });
