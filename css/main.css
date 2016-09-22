@@ -11,7 +11,7 @@
   .space_text{
       float: none !important;
       margin: 0 auto !important;
-    
+
 
 
 
@@ -310,7 +310,7 @@ header,.main-nav-scrolled {
 .links a{
     text-decoration: none;
     /*font-size: 18px;*/
-    font-family: Abril Fatface;
+    font-family: Cabin;
     color:black;
     border-style: solid;
     border-width: 2px;
@@ -327,7 +327,8 @@ header,.main-nav-scrolled {
 
 .links a:hover{
     text-decoration: none;
-    color:white;
+    color: orange;
+    background-color: white;
 
 
 }
@@ -866,7 +867,7 @@ font-size: small;
     width: 500px;
 }
 .global{
-    margin-left: 0px;
+    margin-left: 10%;
 }
 .stopspin{
     position: absolute;
