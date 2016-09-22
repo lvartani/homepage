@@ -281,7 +281,7 @@ header,.main-nav-scrolled {
 .more_info{
     font-family: Cabin;
 
-    margin-left: 10%;
+    /*margin-left: 10%;*/
     float: left;
     width: 300px;
 
@@ -290,7 +290,7 @@ header,.main-nav-scrolled {
 
     font-family: Cabin;
     font-size: 18px;
-    margin-left: 10%;
+    margin-left: 15%;
     float:left;
 
 }
@@ -654,7 +654,7 @@ background-color:lightgrey;
 #expore_b{
     margin-top: 10px;
     position: absolute;
-    bottom: -35px !important;
+    bottom: -15px !important;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
@@ -663,11 +663,12 @@ background-color:lightgrey;
 }
 
 #stop, #start{
-/*font-family:Cabin;*/
+font-family:Cabin;
 cursor: pointer;
 padding: 3px;
 border-style: solid;
 border-width: 1px;
+border-color:grey;
 background-color: white;
 border-radius: 2px;
 
@@ -678,7 +679,7 @@ border-radius: 2px;
     height: 15px;
     border-radius: 50%;
     float: left;
-    margin-left: 12px;
+    /*margin-left: 12px;*/
 }
 .click_c{
     display: inline-block;
