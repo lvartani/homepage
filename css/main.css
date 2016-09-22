@@ -202,7 +202,7 @@ header,.main-nav-scrolled {
 
 .land {
   /*fill: #789f12;*/
-  fill:lightgrey;
+  fill:#F5F5F5;
   stroke: darkgrey;
   stroke-width: 1px;
 }
@@ -214,8 +214,8 @@ header,.main-nav-scrolled {
 
 
 .country {
-  fill: lightgrey;
-  stroke: #FFF;
+  fill: #F5F5F5;
+  stroke: darkgrey;
   stroke-width: 1px;
 }
 
