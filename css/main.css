@@ -20,10 +20,11 @@
   .about_text{
       margin: 30px;
   }
+  .links a{
+      border-style: none !important;
+  }
 }
-p{
-    margin: 0 0 5px !important;
-}
+
 
 * {
     margin: 0;
@@ -39,7 +40,9 @@ body {
   font-family: "Cabin";
 
 }
-
+p{
+    margin: 0 0 5px !important;
+}
 header {
 font-family: "Abril Fatface", sans-serif;;
   height: 130px;
