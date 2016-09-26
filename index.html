@@ -50,11 +50,26 @@
                     <div class="globe_space">
                         <div class="globe">
                             <div id="expore_b">
-                                <p> <span id="start">START</span>
+                                <!-- <p> <span id="start">START</span>
                                     <span id="stop">STOP</span>
-                                </p>
+                                </p> -->
+
+                                <div class="btn-group stasto" data-toggle="buttons">
+                                <span class="start_b">
+                                  <label class="btn btn-warning active">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" checked> SPIN
+                                  </label>
+                                </span>
+                                <span class="stop_b">
+                                  <label class="btn btn-warning">
+                                    <input type="radio" name="options"id="option2" autocomplete="off"> STOP
+                                  </label>
+                                </span>
+                                </div>
                                 <!-- <p>Navigate projects with globe</p> -->
-                                <p class="click_c">Click<div class="orange_circle"></div>to view projects</p>
+                                <br>
+                                <p class="click_c">Click <div class="orange_circle"></div> to view projects.</p>
+                                <p class="click_c">Drag <img class="drag" src="images/drag.png"> to turn globe.</p>
 
                             </div>
                             <h1 id= "country_label"></h1>
@@ -273,10 +288,12 @@
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css">
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
     <!-- bootstrap -->
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
 
     <!-- Install Restive.JS -->
     <!-- <script type="text/javascript" src="js/restive.min.js"></script> -->

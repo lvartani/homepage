@@ -417,12 +417,14 @@ function ready(error, world,countryData, countryAll) {
              .duration(0);
          }
 
-         d3.select("#stop").on("click", function(d,i){
+         d3.select(".stop_b").on("click", function(d,i){
              stop1_transition();
              title.text("");
+             $(this).button('toggle');
          });
-         d3.select("#start").on("click", function(d,i){
+         d3.select(".start_b").on("click", function(d,i){
              start_transition();
+             $(this).button('toggle');
          });
 
 
