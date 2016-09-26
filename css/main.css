@@ -993,20 +993,8 @@ a:active{
     float:left;
 }
 #school3, #school4{
-    font-size:12px;
     padding-left: 20px;
 }
-td{
-    padding:10px;
-}
-.b{
- margin-right: 10px;
-}
-.job:hover{
-    color:navy;
-    cursor: pointer;
-}
-
 
 
 /*Resume Style*/
