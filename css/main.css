@@ -184,9 +184,9 @@ header,.main-nav-scrolled {
 .globe{
     /*position: absolute;*/
     text-align: center;
-
+    padding-top: 20px;
     position: relative;
-    padding:0;
+
     display:inline-block;
     margin-left: 5%;
 
@@ -207,6 +207,7 @@ header,.main-nav-scrolled {
     margin-left: 10%;
     vertical-align: top;
     margin-top: 5%;
+    padding-top: 30px;
 }
 .explore{
     text-align: center;
