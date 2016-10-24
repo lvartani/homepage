@@ -15,6 +15,8 @@
   .space_text{
       float: none !important;
       margin: 0 auto !important;
+      padding: 10px;
+
 
   }
   .about_text{
@@ -185,7 +187,7 @@ header,.main-nav-scrolled {
 
     position: relative;
     padding:0;
-    float:left;
+    display:inline-block;
     margin-left: 5%;
 
 
@@ -200,9 +202,17 @@ header,.main-nav-scrolled {
 .space_text{
     font-family:Cabin;
     width:500px;
-    float:left;
-    margin-top: 10%;
+    display:inline-block;
+    text-align:left;
     margin-left: 10%;
+    vertical-align: top;
+    margin-top: 5%;
+}
+.explore{
+    text-align: center;
+}
+.top_c{
+    text-align: center;
 }
 .water {
   fill: white;
@@ -284,7 +294,8 @@ header,.main-nav-scrolled {
 }
 .contact_i{
     width:100%;
-    margin-left: 80px;
+
+    text-align: center;
 
 }
 
@@ -301,7 +312,8 @@ header,.main-nav-scrolled {
     font-family: Cabin;
     font-size: 18px;
     margin-left: 15%;
-    float:left;
+    display: inline-block;
+    vertical-align: middle;
 
 }
 .myform h2{
@@ -311,23 +323,26 @@ header,.main-nav-scrolled {
      border-radius: 50%;
      width:300px;
      margin-left: 5%;
-     float: left;
+     display: inline-block;
      /*-webkit-filter: grayscale(10%);
      filter: grayscale(10%);*/
 }
 
-.links a{
+.links button{
     text-decoration: none;
     /*font-size: 18px;*/
     font-family: Cabin;
-    color:black;
-    border-style: solid;
-    border-width: 2px;
+
+    color:orange;
+    background-color: white;
     margin-left: 20%;
     padding: 5px;
-    border-radius: 5%;
+
 
     /*border-bottom: 3px solid #000;*/
+}
+.email{
+    color:orange;
 }
 
 .links{
@@ -678,19 +693,19 @@ background-color:lightgrey;
 .stasto{
     padding-top 5px;
     font-family: Cabin;
+    padding: 5px;
 }
 .orange_circle{
     background-color: orange;
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    float: left;
+    display: inline-block;
     margin-top: 5px;
     /*margin-left: 12px;*/
 }
 .click_c{
     display: inline-block;
-    float: left;
 }
 
 #stop:hover, #start:hover{
